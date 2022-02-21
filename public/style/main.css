@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  height: 90vw;
+}
+
+.all {
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+  margin-left: 16vw;
+  margin-right: 16vw;
+  -webkit-box-shadow: 1px 7px 22px 3px #002cd62b;
+          box-shadow: 1px 7px 22px 3px #002cd62b;
+}
+
+.left {
+  background: url("./c959da605aff53ad31f5202519708e2b.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.left .flou {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  padding-top: 3vw;
+  padding-bottom: 5vw;
+}
+
+.left .flou p {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 1vw;
+}
+
+.right .right-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1vw;
+  margin-left: 3vw;
+  margin-bottom: 4vw;
+}
+
+.right .right-title h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.right .right-title h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.right .cases {
+  margin-left: 6vw;
+  gap: 1vw;
+}
+
+.right .cases input {
+  width: 19vw;
+  height: 3vw;
+}
+
+.nav-itemes-gap {
+  gap: 7vw;
+}
+
+.nav-itemes-gap a {
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.height {
+  border-bottom: #b9b9b9bb solid 1px;
+}
+
+.height a {
+  color: #999898;
+  margin-bottom: 1vw;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.height a:hover {
+  color: #1100ff;
+  text-decoration: none;
+}
+
+.discription-logo {
+  width: 90%;
+}
+
+.discription-logo .master {
+  width: 2vw;
+}
+
+.discription-logo .visa {
+  width: 3vw;
+}
+
+.discription-logo .paypal {
+  width: 5vw;
+}
+
+.adress-icon img {
+  width: 2vw;
+  margin-right: 1vw;
+  -webkit-box-shadow: 1px 1px 7px 1px #7f7fff96;
+          box-shadow: 1px 1px 7px 1px #7f7fff96;
+  border-radius: 30px;
+}
+
+.bottom a {
+  margin-left: 2vw;
+  text-decoration: none;
+  color: #6e6e6e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bottom h4 {
+  font-size: 16px;
+  color: #6e6e6e;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$primary-color:#020076;
+$secondary-color: #999898;
+$button-color: #2639ED;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+    main{
+        height: 90vw;
+    }
+    .all{
+        margin: {
+            top: 5vw;
+            bottom: 2vw;
+            left: 16vw;
+            right: 16vw;
+        };
+        box-shadow: 1px 7px 22px 3px #002cd62b;
+    }
+
+.left{
+    background: url("./c959da605aff53ad31f5202519708e2b.webp");
+    background-position: center;
+    background-size: cover;
+    .flou{
+        align-items: center;
+        backdrop-filter: blur(15px);
+        padding: {
+            top: 3vw;
+            bottom: 5vw;
+        };
+    p{
+        text-align: center;
+        color: white;
+        font-size: 16px;
+    }
+}
+}
+.right{
+    align-items: center;
+    justify-content: center;
+    padding-right: 1vw;
+    .right-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vw;
+        margin-left: 3vw;
+        margin-bottom: 4vw;
+        h1{
+            font-size: 24px;
+            text-align: center;
+    
+        }
+        h3{
+            text-align: center;
+    
+            font-size: 18px;
+        }
+        }
+    .cases{
+        margin-left: 6vw;
+        gap: 1vw;
+        input{
+            width: 19vw;
+            height: 3vw;
+        }
+    }
+}
+
+
+
+
+// --------------------------------------------
+// **************NavBare***************
+// --------------------------------------------
+
+
+.nav-itemes-gap{
+    gap: 7vw;
+    a{
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
+
+
+// --------------------------------------------
+// **************Footer***************
+// --------------------------------------------
+
+;
+.height{
+    border-bottom: #b9b9b9bb solid 1px;
+    a{
+        color: #999898;
+        margin-bottom: 1vw;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    a:hover{
+        color: #1100ff;
+        text-decoration: none;
+    }
+}
+.discription-logo{
+ width: 90%; 
+ .master{
+     width: 2vw;
+ }
+ .visa{
+    width: 3vw;
+}
+.paypal{
+    width: 5vw;
+}
+}
+.adress-icon{
+    img{
+        width: 2vw;
+        margin-right: 1vw;
+        box-shadow: 1px 1px 7px 1px #7f7fff96;
+        border-radius: 30px;
+    }
+}
+.bottom{
+    a{
+        margin-left: 2vw;
+        text-decoration: none;
+        color: #6e6e6e;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    h4{
+        font-size: 16px;
+        color: #6e6e6e;
+    }
+}
+
+
