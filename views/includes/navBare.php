@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./public/js/jquery-3.6.0.min.js">
     <link rel="stylesheet" href="./public/js/popper.min.js">
     <link rel="stylesheet" href="./public/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>

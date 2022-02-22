@@ -2,6 +2,7 @@
 
     session_start();
 
+    require_once './bootstrap.php';
 
     spl_autoload_register('autoload');
 
