@@ -11,8 +11,8 @@
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mx-auto">
-            <table class="table table-hover">
+        <div class="col mt-5-md-8 mx-auto">
+            <table class="table mt-5 md-10 table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Nom</th>
@@ -25,15 +25,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <th scope="row"></th>
-                        <th scope="row"></th>
-                        <th scope="row"></th>
-                        <th scope="row"></th>
-                        <th scope="row"></th>
-                        <th scope="row"></th>
-                    </tr>
+                <?php foreach($voyages as $voyage):?>
+                <tr>
+                    <th class="row"><?php echo $voyage['nom']; ?></th>
+                    <td class="row"><?php echo $voyage['date']; ?></td>
+                    <td class="row"><?php echo $voyage['heur_depar']; ?></td>
+                    <td class="row"><?php echo $voyage['heur_arriver']; ?></td>
+                    <td class="row"><?php echo $voyage['gare-dep']; ?></td>
+                    <td class="row"><?php echo $voyage['gare-arr']; ?></td>
+                    <td class="row"><?php echo $voyage['train']; ?></td>
+                    
+                </tr>
+                <?php endforeach?>
                 </tbody>
             </table>
         </div>
