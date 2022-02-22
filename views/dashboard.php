@@ -1,5 +1,5 @@
 <?php
-    include_once './views/includes/navBare.php';
+
 ?>
 <?php
 
