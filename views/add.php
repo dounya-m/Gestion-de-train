@@ -4,8 +4,8 @@
 <?php
     if(isset($_POST['submit'])){
 
-    $data = new VoyageController();
-    $voyages = $data->getAllVoyage();
+    $newVoyage = new VoyageController();
+    $newVoyage->addVoyages();
 }
 ?>
 
@@ -48,15 +48,6 @@
                         <input type="number" name="Ntrain" class="form-control" placeholder="écrire...">
                     </div>
 
-                    <div class="form-group">
-                        <label for="1classe">1ere Classe </label>
-                        <input type="number" name="1C" class="form-control" placeholder="écrire...">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="2classe">2eme Classe </label>
-                        <input type="number" name="2C" class="form-control" placeholder="écrire...">
-                    </div>
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary" name="submit">

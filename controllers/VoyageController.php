@@ -17,8 +17,6 @@
                     'train' => $_POST['Ntrain'],
                     'gare-dep' => $_POST['garDep'],
                     'gare-arr' => $_POST['garArr'],
-                    '1classe' => $_POST['1C'],
-                    '2classe' => $_POST['2C']
                 );
 
                 $result = Voyage::add($data);
