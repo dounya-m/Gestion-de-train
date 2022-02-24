@@ -7,7 +7,7 @@ require_once './controllers/homeController.php';
     $home = new homeController();
 
 
-    $pages = ['dashboard','add','update','delet'];
+    $pages = ['dashboard','add','update','delet','login'];
     
         if(isset($_GET['page'])){
             if(in_array($_GET['page'],$pages)){

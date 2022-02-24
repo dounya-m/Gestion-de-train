@@ -7,7 +7,9 @@ class Voyage{
     static public function getAll(){
 
         // $stmt = Db::connect()->prepare('SELECT * FROM voyage');
-        $stmt = Db::connect()->prepare('SELECT * FROM voyage INNER JOIN train ON voyage.train = train.id');
+        $stmt = Db::connect()->prepare('SELECT voyage.*, train.id as train_id, train.nom, train.first_class, 
+        train.second_class, train.N FROM voyage INNER JOIN train ON voyage.train = train.id');
+
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
@@ -19,10 +21,11 @@ class Voyage{
 
     static public function add($data){
 
-        $stmt = Db::connect()->prepare('INSERT INTO voyage
+    $stmt = Db::connect()->prepare('INSERT INTO voyage
     (heur_depart ,heur_arriver ,date ,train ,gare_dep ,gare_arr)
 
     VALUES (?,?,?,?,?,?)');
+    
     $stmt->bindParam(1, $data['heur_depart']);
     $stmt->bindParam(2, $data['heur_arriver']);
     $stmt->bindParam(3, $data['date']);
@@ -38,6 +41,22 @@ class Voyage{
         }
             $stmt->close();
             $stmt = null;
+    }
+
+    static public function getVoyage($id){
+        
+        try{
+
+            $query ='SELECT * FROM voyage WHERE id=:id ';
+            $stmt = Db::connect()->prepare($query);
+            $stmt->execute([":id" => $id]);
+            $voyage = $stmt->fetch(PDO::FETCH_OBJ);
+            return $voyage;
+
+        }catch(PDOExeption $ex){
+
+            echo 'erreur' . $ex->$getMessage;
+        }
     }
 
 }

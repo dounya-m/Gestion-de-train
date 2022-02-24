@@ -1,7 +1,7 @@
 <?php
 
 
-    class VoyageController{
+    class VoyageController {
 
         public function getAllVoyage(){
             $voyages = Voyage::getAll();
@@ -21,11 +21,22 @@
 
                 $result = Voyage::add($data);
                 if($result === 'ok'){
-                    header('location'.BASE_URL);
+                    header('location:'.BASE_URL);
                 }else{
                     echo $result;
                 }
             }
+        }
+
+
+
+        public function getOneVoyage(){
+
+            if(isset($_POST['id'])){
+                $voyages = Voyage::getVoyage($_POST["id"]);
+            return $voyages;
+            }
+            
         }
 
     }

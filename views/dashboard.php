@@ -6,7 +6,6 @@
 
     $data = new VoyageController();
     $voyages = $data->getAllVoyage();
-    // print_r($voyages);
 
 ?>
 <div class="container">
@@ -49,7 +48,7 @@
                 <form action="update" method="post" >
                         <input type="hidden" name="id" 
                         value="<?php echo $voyage['id']; ?>">
-                        <button class="btn btn-sm btn-light">add</button>
+                        <button class="btn btn-sm btn-light">update</button>
                     </form>
                     <form action="delet" method="post" >
                         <input type="hidden" name="id" 
@@ -65,6 +64,11 @@
         </div>
     </div>
     </div>
+</div>
+<div class="d-flex justify-content-end">
+<div class="">
+<img src="./public/images/travelDashboard.png" alt="travel">
+</div>
 </div>
 <?php
     include_once './views/includes/footer.php';

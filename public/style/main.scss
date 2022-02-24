@@ -9,9 +9,19 @@ $button-color: #2639ED;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     }
+
     main{
         height: 90vw;
     }
+
+
+
+
+// --------------------------------------------
+// *******************LOGIN******************
+// ---------------------------------------------
+
+
     .all{
         margin: {
             top: 5vw;
@@ -23,9 +33,12 @@ $button-color: #2639ED;
     }
 
 .left{
-    background: url("./c959da605aff53ad31f5202519708e2b.webp");
+    background:url("../images/c959da605aff53ad31f5202519708e2b.webp");
+    background-color: aquamarine;
     background-position: center;
     background-size: cover;
+    box-shadow: 4px 1px 14px 1px #9090ff7a;
+
     .flou{
         align-items: center;
         backdrop-filter: blur(15px);
@@ -41,6 +54,7 @@ $button-color: #2639ED;
 }
 }
 .right{
+    
     align-items: center;
     justify-content: center;
     padding-right: 1vw;
@@ -49,7 +63,7 @@ $button-color: #2639ED;
         flex-direction: column;
         align-items: center;
         gap: 1vw;
-        margin-left: 3vw;
+        margin-left: 5vw;
         margin-bottom: 4vw;
         h1{
             font-size: 24px;
@@ -63,17 +77,26 @@ $button-color: #2639ED;
         }
         }
     .cases{
-        margin-left: 6vw;
+        margin-left: 7vw;
         gap: 1vw;
         input{
             width: 19vw;
             height: 3vw;
+            padding: 1vw;
+            border-radius: 5px;
+            border: solid 1px #c6c9f5a6;
+            border-top: none;
+            box-shadow: 1px 2px 6px 2px #c4ccff36;
+            margin-bottom: 1vw;
+        }
+        .flex{
+            display: flex;
+            width: 19vw;
+            height: 2vw;
+            gap: 2vw;
+        }
         }
     }
-}
-
-
-
 
 // --------------------------------------------
 // **************NavBare***************

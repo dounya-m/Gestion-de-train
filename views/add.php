@@ -45,7 +45,12 @@
 
                     <div class="form-group">
                         <label for="train">N° du Train</label>
-                        <input type="number" name="Ntrain" class="form-control" placeholder="écrire...">
+                        <select name="Ntrain" id="Ntrain" class="form-control">
+                            <option value="#">select</option>
+                            <option value="1" name="Ntrain">nord</option>
+                            <option value="2" name="Ntrain">ouest</option>
+
+                        </select>
                     </div>
 
 
