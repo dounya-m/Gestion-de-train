@@ -2,15 +2,22 @@
     include_once './views/includes/navBare.php';
 ?>
 <?php
-    if(isset($_POST['id'])){
+
+if(isset($_POST["id"])){
+
+
     $existVoyage = new VoyageController();
-    $voyage = $existVoyage->getOneVoyage();
-    print_r($voyage);
-   
-}else if (isset($_POST["garDep"])){
-echo "here";
+    $voyage = $existVoyage -> getOneVoyage();
 
 } 
+
+if(isset($_POST['submit'])){
+
+
+    $existVoyage = new VoyageController();
+    $existVoyage -> updateOneVoyage();
+
+}  
 
 // die(var_dump($voyage));
 ?>
@@ -58,14 +65,15 @@ echo "here";
                         <label for="train">N° du Train</label>
                         <select name="Ntrain" id="Ntrain" class="form-control">
                             <option value="#">select</option>
-                            <option value="1" name="Ntrain" value="<?php echo $voyage->satatut ? 'selected' : ''; ?>">nord</option>
-                            <option value="2" name="Ntrain"  value="<?php echo $voyage->satatut ? 'selected' : ''; ?>">ouest</option>
+                            <option  <?php echo $voyage->train == 1 ? 'selected' : ''; ?> value="1" name="Ntrain">nord</option>
+                            <option  <?php echo $voyage->train == 2 ? 'selected' : ''; ?> value="2" name="Ntrain">ouest</option>
 
                         </select>
                     </div>
 
 
                     <div class="form-group">
+                    <input type="hidden" name="id" value="<?php echo $voyage->id; ?>">
                         <button type="submit" class="btn btn-primary" name="submit">
                             Valider
                         </button>

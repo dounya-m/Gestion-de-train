@@ -117,6 +117,24 @@ main {
   text-decoration: none;
 }
 
+.containers {
+  background-color: #020076;
+  padding-left: 2vw;
+  padding-right: 4vw;
+}
+
+.containers .container_logo img {
+  width: 9vw;
+}
+
+.containers .container_items input {
+  width: 25vw;
+  height: 2.5vw;
+  background: none;
+  border: none;
+  border-bottom: solid white 1px;
+}
+
 .height {
   border-bottom: #b9b9b9bb solid 1px;
 }

@@ -18,9 +18,9 @@ class Voyage{
 
 
 
-
     static public function add($data){
 
+            
     $stmt = Db::connect()->prepare('INSERT INTO voyage
     (heur_depart ,heur_arriver ,date ,train ,gare_dep ,gare_arr)
 
@@ -43,22 +43,69 @@ class Voyage{
             $stmt = null;
     }
 
-    static public function getVoyage($id){
-        
-        try{
+    static public function getVoyage($id){ 
 
+        try{
             $query ='SELECT * FROM voyage WHERE id=:id ';
             $stmt = Db::connect()->prepare($query);
-            $stmt->execute([":id" => $id]);
+            $stmt->execute(array(":id" => $id));
             $voyage = $stmt->fetch(PDO::FETCH_OBJ);
             return $voyage;
 
-        }catch(PDOExeption $ex){
+        }catch(PDOException $ex){
 
             echo 'erreur' . $ex->$getMessage;
         }
     }
 
-}
+
+    static public function delete($data){
+        $id = $data ['id'];
+
+        try{
+            
+            $query = 'DELETE FROM voyage WHERE id=:id';
+            $stmt = Db::connect()->prepare($query);
+            $stmt->execute(array(":id" => $id));
+
+                if($stmt->execute()){
+                    return 'ok';
+
+                } 
+                }catch(PDOException $ex){
+
+                    echo 'erreur' . $ex->getMessage();
+
+        }
+    }
+
+
+    static public function update($data){
+$id = $data['id'];
+        $stmt = Db::connect()->prepare('UPDATE voyage SET heur_depart=:heur_depart, heur_arriver=:heur_arriver, train=:train, date=:date, gare_dep=:gare_dep, gare_arr=:gare_arr WHERE id=:id ');
+
+            $stmt->bindParam(':id', $data['id']);
+            $stmt->bindParam(':heur_depart', $data['heur_depart']);
+            $stmt->bindParam(':heur_arriver', $data['heur_arriver']);
+            $stmt->bindParam(':date', $data['date']);
+            $stmt->bindParam(':train', $data['train']);
+            $stmt->bindParam(':gare_dep', $data['gare-dep']);
+            $stmt->bindParam(':gare_arr', $data['gare-arr']);
+    
+    
+    
+            if($stmt->execute()){
+                return 'ok';
+            }else{
+                return 'error';
+            }
+                // $stmt->close();
+                // $stmt = null;
+        }
+
+
+        
+    }
+
 
 ?>

@@ -1,13 +1,14 @@
-<?php
-    include_once './views/includes/navBare.php';
+<?php 
+    include_once './views/includes/dashboardNav.php';
 ?>
-<?php
 
+<?php
 
     $data = new VoyageController();
     $voyages = $data->getAllVoyage();
 
 ?>
+    <section class= d-flex >
 <div class="container">
     <div class="row">
         <div class="col mt-5  mx-auto">
@@ -65,13 +66,7 @@
     </div>
     </div>
 </div>
-<div class="d-flex justify-content-end">
-<div class="">
-<img src="./public/images/travelDashboard.png" alt="travel">
-</div>
-</div>
-<?php
-    include_once './views/includes/footer.php';
-?>
+</section>
+
 
 
