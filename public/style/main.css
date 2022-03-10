@@ -187,4 +187,39 @@ main {
   font-size: 16px;
   color: #6e6e6e;
 }
+
+.head {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff3d), to(#1a12ff65)), url("../images/train.webp");
+  background: linear-gradient(#ffffff3d, #1a12ff65), url("../images/train.webp");
+  width: 100%;
+  height: 45vw;
+  background-position: center;
+  background-size: cover;
+  padding-top: 13vw;
+  padding-left: 5vw;
+}
+
+.head h1 {
+  font-size: 72px;
+  font-weight: 600;
+  width: 30%;
+  color: #f6f6ff;
+}
+
+.head-description {
+  margin-top: 5vw;
+}
+
+.head-description .d-flex {
+  gap: 2vw;
+}
+
+.head-description .d-flex h3 {
+  color: white;
+  font-weight: 600;
+}
+
+.head-description .d-flex p {
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */

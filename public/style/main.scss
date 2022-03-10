@@ -208,3 +208,38 @@ padding: {
 }
 
 
+// --------------------------------------------
+// **************home reservation***************
+// --------------------------------------------
+.head{
+    background:linear-gradient(#ffffff3d, #1a12ff65),
+    url("../images/train.webp");
+    width: 100%;
+    height: 45vw;
+    background-position: center;
+    background-size: cover;
+    padding: {
+        top: 13vw;
+        left: 5vw;
+    };
+h1{
+    font-size: 72px;
+    font-weight: 600;
+    width: 30%;
+    color: #f6f6ff;
+}
+}
+.head-description{
+    margin-top: 5vw;
+    .d-flex{
+        gap: 2vw;
+        h3{
+            color: white;
+            font-weight: 600;
+        }
+        p{
+            color: white;
+
+        }
+    }
+}
