@@ -188,21 +188,33 @@ main {
   color: #6e6e6e;
 }
 
+#myVideo {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  margin-top: 1vw;
+}
+
 .head {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff3d), to(#1a12ff65)), url("../images/train.webp");
-  background: linear-gradient(#ffffff3d, #1a12ff65), url("../images/train.webp");
+  background: linear-gradient(10deg, #0030bb5c, transparent);
   width: 100%;
   height: 45vw;
   background-position: center;
   background-size: cover;
   padding-top: 13vw;
   padding-left: 5vw;
+  -webkit-box-shadow: 12px 11px 16px 9px #0084ff7d;
+          box-shadow: 12px 11px 16px 9px #0084ff7d;
+  margin-top: 1vw;
 }
 
 .head h1 {
   font-size: 72px;
   font-weight: 600;
-  width: 30%;
+  width: 60%;
   color: #f6f6ff;
 }
 
@@ -221,5 +233,83 @@ main {
 
 .head-description .d-flex p {
   color: white;
+}
+
+.form {
+  gap: 2vw;
+  background: white;
+  -webkit-box-shadow: 1px 1px 9px 5px rgba(188, 217, 255, 0.705);
+          box-shadow: 1px 1px 9px 5px rgba(188, 217, 255, 0.705);
+  padding: 2vw !important;
+}
+
+.form label {
+  color: #1a203b;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.form input {
+  padding: 1vw;
+  border: solid 1px rgba(144, 155, 218, 0.698);
+}
+
+.middle h1 {
+  text-align: center;
+  font-weight: 600;
+  color: #020076;
+}
+
+.middle .card {
+  -webkit-box-shadow: 1px 1px 9px 3px #dae7fa75;
+          box-shadow: 1px 1px 9px 3px #dae7fa75;
+  border-radius: 25px;
+}
+
+.middle .card img {
+  border-radius: 25px 25px 0 0;
+}
+
+.middle .middle_card {
+  gap: 3vw;
+  margin-bottom: 8vw;
+}
+
+.recherchResult {
+  background: url();
+}
+
+.recherchResult h1 {
+  color: #020076;
+}
+
+.recherchResult .destination {
+  gap: 7vw;
+  -webkit-box-shadow: 4px 1px 12px 2px #048eff2f;
+          box-shadow: 4px 1px 12px 2px #048eff2f;
+  border-radius: 25px;
+  padding: 2vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.recherchResult .destination hr {
+  height: 10vh;
+  width: .1vw;
+  color: #050052;
+  background-color: #000742;
+}
+
+.recherchResult .destination img {
+  width: 3vw;
+}
+
+.recherchResult .destination h3 {
+  color: #020076;
+}
+
+.recherchResult .destination p {
+  font-size: 18px;
+  color: #6e6e6e;
 }
 /*# sourceMappingURL=main.css.map */

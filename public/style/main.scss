@@ -211,9 +211,19 @@ padding: {
 // --------------------------------------------
 // **************home reservation***************
 // --------------------------------------------
+
+
+    #myVideo {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+
+        z-index: -1;
+        margin-top: 1vw;
+      }
 .head{
-    background:linear-gradient(#ffffff3d, #1a12ff65),
-    url("../images/train.webp");
+    background: linear-gradient(10deg, #0030bb5c, transparent);
     width: 100%;
     height: 45vw;
     background-position: center;
@@ -222,10 +232,12 @@ padding: {
         top: 13vw;
         left: 5vw;
     };
+    box-shadow: 12px 11px 16px 9px #0084ff7d;
+    margin-top: 1vw;
 h1{
     font-size: 72px;
     font-weight: 600;
-    width: 30%;
+    width: 60%;
     color: #f6f6ff;
 }
 }
@@ -240,6 +252,81 @@ h1{
         p{
             color: white;
 
+        }
+    }
+}
+.form{
+    gap: 2vw;
+    // background: linear-gradient(10deg, #e0deffd8, transparent);
+    background: white;
+    box-shadow: 1px 1px 9px 5px rgba(188, 217, 255, 0.705);
+    padding: 2vw !important;
+    label{
+        color: rgb(26, 32, 59);
+        font-size: 22px;
+        font-weight: 500;
+    }
+    input{
+        padding: 1vw;
+        border: solid 1px rgba(144, 155, 218, 0.698);
+    }
+}
+
+.middle{
+
+    h1{
+        text-align: center;
+        font-weight: 600;
+        color: #020076;
+    }
+    .card{
+        box-shadow: 1px 1px 9px 3px #dae7fa75;
+        border-radius: 25px;
+        img{
+            border-radius: 25px 25px 0 0 ;
+        }
+        }
+    .middle_card{
+        gap: 3vw;
+        margin-bottom: 8vw;
+    }
+}
+
+// -------------------------------------------------------------
+// **************Resultats de recherche de voyage***************
+// -------------------------------------------------------------
+
+.recherchResult{
+    background: url();
+
+    h1{
+        color: #020076;
+    }
+
+    .destination{
+        gap: 7vw;
+        box-shadow: 4px 1px 12px 2px #048eff2f;
+        border-radius: 25px;
+        padding: 2vw;
+        margin: {
+            left: 5vw;
+            right: 5vw;
+        };
+        hr{
+            height:10vh;
+            width:.1vw;
+            color:rgb(5, 0, 82);
+            background-color:rgb(0, 7, 66);
+           }
+        img{
+            width: 3vw;
+        }
+        h3{
+            color: #020076;
+        }
+        p{
+            font-size: 18px;
+            color: #6e6e6e;
         }
     }
 }
