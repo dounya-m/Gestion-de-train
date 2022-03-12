@@ -37,7 +37,7 @@
     </div>
     </div>
 </section>
-<section class="form d-flex align-items-center justify-content-center">
+<section class="form d-flex align-items-center justify-content-center" id="form">
     <div class="form-group ">
             <label for="date">Date de voyage</label>
             <input type="date" name="date" class="form-control" placeholder="Date">
@@ -73,38 +73,38 @@
 <div class="middle_card d-flex justify-content-center mt-5 ">
 
     <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="./public/images/train.webp" alt="Card image cap">
+  <img class="card-img-top" src="./public/images/F.webp" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Casablanca</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#form" class="btn btn-primary">Réservée</a>
   </div>
   </div>
 
   <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="./public/images/D.webp" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Marrakech</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#form" class="btn btn-primary">Réservée</a>
   </div>
   </div>
 
   <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="./public/images/B.webp" alt="Card image cap">
+  <img class="card-img-top" src="./public/images/E.webp" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Tanger</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#form" class="btn btn-primary">Réservée</a>
   </div>
   </div>
 
   <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="./public/images/C.webp" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Fès</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#form" class="btn btn-primary">Réservée</a>
   </div>
   </div>
 
@@ -113,7 +113,7 @@
     <section class="footer_landing">
     <?php 
     include_once './views/includes/footer.php';
-?>
+    ?>
     </section>
 
 </body>

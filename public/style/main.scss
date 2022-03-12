@@ -147,13 +147,6 @@ padding: {
 }
 
 
-// --------------------------------------------
-// **************dashboard Aside***************
-// --------------------------------------------
-
-
-
-
 
 // --------------------------------------------
 // **************Footer***************
@@ -208,9 +201,9 @@ padding: {
 }
 
 
-// --------------------------------------------
-// **************home reservation***************
-// --------------------------------------------
+// -----------------------------------------------------
+// **************landing page reservation***************
+// -----------------------------------------------------
 
 
     #myVideo {
@@ -285,6 +278,10 @@ h1{
         img{
             border-radius: 25px 25px 0 0 ;
         }
+        a{
+            border-radius: 10px;
+            padding: 10px 15px 10px 15px;
+        }
         }
     .middle_card{
         gap: 3vw;
@@ -309,8 +306,8 @@ h1{
         border-radius: 25px;
         padding: 2vw;
         margin: {
-            left: 5vw;
-            right: 5vw;
+            left: 12vw;
+            right: 12vw;
         };
         hr{
             height:10vh;
@@ -329,4 +326,66 @@ h1{
             color: #6e6e6e;
         }
     }
+    .resultats{
+        .card{
+            box-shadow: 1px 1px 9px 3px #dae7fa75;
+            border-radius: 25px;
+            img{
+                border-radius: 25px 25px 0 0 ;
+            }
+            .card-body{
+
+                .time{
+                    gap: 3vw;
+                    h5{
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: #020076;
+                    }
+                    p{
+                        color:#999898;
+                        margin-top: 1vw;
+                    }
+                }
+                .classe{
+                    color: #020076;
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 1vw;
+
+                }
+            }
+            a{
+                border-radius: 10px;
+                padding: 10px 15px 10px 15px;
+                background-color: #020076;
+            }
+            }
+            
+    }
+}
+
+
+// -------------------------------------------------------------
+// **************identify page***************
+// -------------------------------------------------------------
+
+main{
+    margin-top: 10vw;
+    h1{
+        text-align: center;
+        margin-bottom: 3vw;
+        color: #020076;
+    }
+.identifier{
+    gap: 1vw;
+    display:bock;
+    width:fit-content;
+    margin:auto;
+
+        input , button{
+            height: 3vw;
+            border-radius: 10px;
+        }
+}
 }

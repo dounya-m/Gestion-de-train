@@ -270,6 +270,11 @@ main {
   border-radius: 25px 25px 0 0;
 }
 
+.middle .card a {
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
 .middle .middle_card {
   gap: 3vw;
   margin-bottom: 8vw;
@@ -289,8 +294,8 @@ main {
           box-shadow: 4px 1px 12px 2px #048eff2f;
   border-radius: 25px;
   padding: 2vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: 12vw;
+  margin-right: 12vw;
 }
 
 .recherchResult .destination hr {
@@ -311,5 +316,67 @@ main {
 .recherchResult .destination p {
   font-size: 18px;
   color: #6e6e6e;
+}
+
+.recherchResult .resultats .card {
+  -webkit-box-shadow: 1px 1px 9px 3px #dae7fa75;
+          box-shadow: 1px 1px 9px 3px #dae7fa75;
+  border-radius: 25px;
+}
+
+.recherchResult .resultats .card img {
+  border-radius: 25px 25px 0 0;
+}
+
+.recherchResult .resultats .card .card-body .time {
+  gap: 3vw;
+}
+
+.recherchResult .resultats .card .card-body .time h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #020076;
+}
+
+.recherchResult .resultats .card .card-body .time p {
+  color: #999898;
+  margin-top: 1vw;
+}
+
+.recherchResult .resultats .card .card-body .classe {
+  color: #020076;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 1vw;
+}
+
+.recherchResult .resultats .card a {
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  background-color: #020076;
+}
+
+main {
+  margin-top: 10vw;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 3vw;
+  color: #020076;
+}
+
+main .identifier {
+  gap: 1vw;
+  display: bock;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+main .identifier input, main .identifier button {
+  height: 3vw;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=main.css.map */

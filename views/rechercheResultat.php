@@ -28,8 +28,44 @@
                 <h3>Ville d'Arrivée</h3>
                 <p>Oujada</p>
             </div>
-
         </section>
+
+        
+        <section class="resultats d-flex flex-column align-items-center mt-5">
+            <div class="card" style="width: 25rem;">
+        <img class="card-img-top" src="./public/images/morning.webp" alt="Card image cap">
+        <div class="card-body">
+            <div class="time d-flex align-items-center justify-content-center">
+            <h5>12:00</h5>
+            <p>8h12min</p>
+            <h5>20:12</h5>
+            </div>
+            <hr>
+            <div class="classe d-flex justify-content-between">
+            <p>First Classe</p>
+            <p>220 DH</p>
+            </div>
+            <a href="#" class="btn btn-primary">Réserver</a>
+        </div>
+        </div>
+
+        <div class="card mt-5" style="width: 25rem;">
+        <img class="card-img-top" src="./public/images/B.webp" alt="Card image cap">
+        <div class="card-body">
+        <div class="time d-flex align-items-center justify-content-center">
+            <h5>20:15</h5>
+            <p>10h30min</p>
+            <h5>06:45</h5>
+            </div>
+            <hr>
+            <div class="classe d-flex justify-content-between">
+            <p>First Classe</p>
+            <p>200 DH</p>
+            </div>
+            <a href="#" class="btn btn-primary">Réserver</a>
+        </div>
+        </div>
+            </section>
 
 
     </main>
