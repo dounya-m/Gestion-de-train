@@ -2,6 +2,15 @@
     include_once './views/includes/navBare.php';
 ?>
 
+<?php
+    if(isset($_POST['submit'])){
+
+    $rechercheVoyage = new VoyageController();
+    $rechercheVoyage->findVoyage();
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,30 +47,31 @@
     </div>
 </section>
 <section class="form d-flex align-items-center justify-content-center" id="form">
-    <div class="form-group ">
+      <form method="post" class="form-inline" action="rechercheResultat"> 
+        <div class="form-group">
             <label for="date">Date de voyage</label>
-            <input type="date" name="date" class="form-control" placeholder="Date">
+            <input type="date" name="date" class="form-control m-2" placeholder="Date">
         </div>
         <div class="form-group">
                 <label for="gare-dep">Gare de depart</label>
-                <input type="text" name="garDep" class="form-control" placeholder="Gare de depart">
+                <input type="text" name="gare_dep" class="form-control m-2" placeholder="Gare de depart">
         </div>
         <div class="form-group">
                 <label for="gare-dep">Gare d'Arriver</label>
-                <input type="text" name="garDep" class="form-control" placeholder="Gare de depart">
+                <input type="text" name="gare_arr" class="form-control m-2" placeholder="Gare de depart">
         </div>
-        <div class="select_form d-flex">
+        <!-- <div class="select_form d-flex">
         <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">1ère classe</label>
+  <label class="form-check-label mr-3" for="exampleRadios1">1ère classe</label>
 </div>
     <div class="form-check">
     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
     <label class="form-check-label" for="exampleRadios2">2ème classe</label>
     </div>
-        </div>
-    <form class="form-inline ">
-        <button class="btn btn-primary btn-lg" type="submit">Search</button>
+        </div> -->
+
+        <button class="btn btn-primary btn-lg" type="submit"  name="submit">Search</button>
     </form>
 </section>
 <section class="middle">

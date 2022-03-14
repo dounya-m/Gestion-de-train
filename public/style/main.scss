@@ -214,7 +214,7 @@ padding: {
 
         z-index: -1;
         margin-top: 1vw;
-      }
+    }
 .head{
     background: linear-gradient(10deg, #0030bb5c, transparent);
     width: 100%;
@@ -314,7 +314,7 @@ h1{
             width:.1vw;
             color:rgb(5, 0, 82);
             background-color:rgb(0, 7, 66);
-           }
+        }
         img{
             width: 3vw;
         }
@@ -327,6 +327,8 @@ h1{
         }
     }
     .resultats{
+        gap: 5vw;
+        flex-wrap: wrap;
         .card{
             box-shadow: 1px 1px 9px 3px #dae7fa75;
             border-radius: 25px;
@@ -371,7 +373,7 @@ h1{
 // -------------------------------------------------------------
 
 main{
-    margin-top: 10vw;
+    margin-top: 6vw;
     h1{
         text-align: center;
         margin-bottom: 3vw;
@@ -382,10 +384,37 @@ main{
     display:bock;
     width:fit-content;
     margin:auto;
-
+    box-shadow: 1px 18px 19px 1px rgba(132, 189, 255, 0.404);
+    padding: 3vw;
+    padding-bottom: 5vw;
+    border-radius: 25px;
+    .form_button{
+        justify-content: flex-end;
+        gap: 2vw;
+        button{
+            width: 10vw;
+        }
+        a{
+            text-decoration: none;
+            color: white
+                }
+    }
         input , button{
+            width: 23vw;
             height: 3vw;
             border-radius: 10px;
         }
+
+        .flex{
+            display: flex;
+            gap: 2vw;
+            input{
+                width: 10.5vw;
+            }
+        }
+        #shadow{
+            box-shadow: 1px 3px 7px 1px rgba(132, 206, 255, 0.404);
+        }
+
 }
 }

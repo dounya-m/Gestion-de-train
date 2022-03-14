@@ -1,3 +1,14 @@
+<?php
+
+    if(isset($_POST['submit'])){
+        $loginAdmin = new adminController;
+        $loginAdmin->adminLogin();
+    }
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,20 +48,18 @@
         </div>
         </div>
         
-        <form action="" method="post"> 
+        <form method="post"> 
                 <div class="cases d-flex flex-column ">
                 <div class="d-flex flex-column">
-                <label for="name">User Name</label>
-                <input class="mail" type="text" id="mail" name="username" require placeholder="admin..">
+                <label for="name">Email</label>
+                <input class="mail" type="text" id="mail" name="usermail" require placeholder="admin..">
                 </div>
                 <div class="d-flex flex-column">
                 <label for="passwword">Password</label>
                 <input class="mail" type="password" id="password" name="password" require placeholder="*****************">
-                <a href="#">Forgot your password?</a>
                 </div>
                 <div class="flex">
-                    <input class="btn btn-primary" class="submit" type="submit" name="sub" value="Sign in" >
-                    <input class="btn btn-outline-primary" class="submit" type="submit" name="sub" value="Sign up" >
+                    <input class="btn btn-primary" class="submit" type="submit" name="submit" value="Sign in" >
                 </div>
         </form>
     </section>

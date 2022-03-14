@@ -318,6 +318,12 @@ main {
   color: #6e6e6e;
 }
 
+.recherchResult .resultats {
+  gap: 5vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .recherchResult .resultats .card {
   -webkit-box-shadow: 1px 1px 9px 3px #dae7fa75;
           box-shadow: 1px 1px 9px 3px #dae7fa75;
@@ -357,7 +363,7 @@ main {
 }
 
 main {
-  margin-top: 10vw;
+  margin-top: 6vw;
 }
 
 main h1 {
@@ -373,10 +379,48 @@ main .identifier {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+  -webkit-box-shadow: 1px 18px 19px 1px rgba(132, 189, 255, 0.404);
+          box-shadow: 1px 18px 19px 1px rgba(132, 189, 255, 0.404);
+  padding: 3vw;
+  padding-bottom: 5vw;
+  border-radius: 25px;
+}
+
+main .identifier .form_button {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 2vw;
+}
+
+main .identifier .form_button button {
+  width: 10vw;
+}
+
+main .identifier .form_button a {
+  text-decoration: none;
+  color: white;
 }
 
 main .identifier input, main .identifier button {
+  width: 23vw;
   height: 3vw;
   border-radius: 10px;
+}
+
+main .identifier .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2vw;
+}
+
+main .identifier .flex input {
+  width: 10.5vw;
+}
+
+main .identifier #shadow {
+  -webkit-box-shadow: 1px 3px 7px 1px rgba(132, 206, 255, 0.404);
+          box-shadow: 1px 3px 7px 1px rgba(132, 206, 255, 0.404);
 }
 /*# sourceMappingURL=main.css.map */

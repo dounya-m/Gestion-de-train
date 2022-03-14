@@ -81,8 +81,9 @@ class Voyage{
 
 
     static public function update($data){
-$id = $data['id'];
-        $stmt = Db::connect()->prepare('UPDATE voyage SET heur_depart=:heur_depart, heur_arriver=:heur_arriver, train=:train, date=:date, gare_dep=:gare_dep, gare_arr=:gare_arr WHERE id=:id ');
+        $id = $data['id'];
+        $stmt = Db::connect()->prepare('UPDATE voyage SET heur_depart=:heur_depart, heur_arriver=:heur_arriver, train=:train, 
+                                        date=:date, gare_dep=:gare_dep, gare_arr=:gare_arr WHERE id=:id ');
 
             $stmt->bindParam(':id', $data['id']);
             $stmt->bindParam(':heur_depart', $data['heur_depart']);
@@ -103,6 +104,23 @@ $id = $data['id'];
                 // $stmt = null;
         }
 
+        static public function recherche($data){
+
+            try{
+            
+                $query = 'SELECT * FROM voyage WHERE date LIKE ? AND gare_dep LIKE ? AND gare_arr LIKE ?';
+                $stmt = Db::connect()->prepare($query);
+                $stmt->execute(array("%".$data['date']."%", "%".$data['gare_dep']."%", "%".$data['gare_arr']."%"  ));
+
+                    return $voyage = $stmt->fetchAll();
+
+                    }catch(PDOException $ex){
+    
+                        echo 'erreur' . $ex->getMessage();
+    
+            }
+
+        }
 
         
     }

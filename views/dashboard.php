@@ -1,4 +1,5 @@
 <?php 
+    //  var_dump($_SESSION);
     include_once './views/includes/dashboardNav.php';
 ?>
 

@@ -21,7 +21,7 @@
 
                 $result = Voyage::add($data);
                 if($result === 'ok'){
-                    header('location:'.BASE_URL);
+                    header('location: ./dashboard');
                 }else{
                     echo $result;
                 }
@@ -58,7 +58,7 @@
                 );
                     $result = Voyage::update($data);
                     if($result==='ok'){
-                        header('location:'.BASE_URL);
+                        header('location: ./dashboard');
                     }else{
                         echo $result;
                     }
@@ -72,12 +72,27 @@
                 $result = voyage::delete($data);
 
                 if($result === 'ok'){
-                    header('location:'.BASE_URL);
+                    header('location: ./dashboard');
                 }else{
                     echo "$result";
                 }
             }
 
+        }
+
+
+        public function findVoyage(){
+            if(isset($_POST['submit'])){
+            $data = array(
+                'date' => $_POST['date'],
+                'gare_dep' => $_POST['gare_dep'],
+                'gare_arr' => $_POST['gare_arr']
+        );
+                return $voyages = voyage::recherche($data);
+                    
+            }
+
+            // return $voyage;
         }
 
     }
