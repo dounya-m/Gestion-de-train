@@ -17,6 +17,7 @@
                     'train' => $_POST['Ntrain'],
                     'gare-dep' => $_POST['garDep'],
                     'gare-arr' => $_POST['garArr'],
+                    'prix' => $_POST['prix'],
                 );
 
                 $result = Voyage::add($data);
@@ -55,6 +56,7 @@
                     'train' => $_POST['Ntrain'],
                     'gare-dep' => $_POST['garDep'],
                     'gare-arr' => $_POST['garArr'],
+                    'prix' => $_POST['prix'],
                 );
                     $result = Voyage::update($data);
                     if($result==='ok'){
@@ -89,10 +91,17 @@
                 'gare_arr' => $_POST['gare_arr']
         );
                 return $voyages = voyage::recherche($data);
-                    
             }
+        }
 
-            // return $voyage;
+        public function reserverDirection(){
+            if(isset($_SESSION['signIn'])) {
+                if(isset($_POST['reserver'])){
+                    header('location: ./reservation');
+                }
+            }else{
+                header('location: ./signIn');
+            }
         }
 
     }

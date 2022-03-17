@@ -167,11 +167,11 @@ padding: {
     }
 }
 .discription-logo{
- width: 90%; 
- .master{
-     width: 2vw;
- }
- .visa{
+width: 90%; 
+.master{
+    width: 2vw;
+}
+.visa{
     width: 3vw;
 }
 .paypal{
@@ -357,7 +357,7 @@ h1{
 
                 }
             }
-            a{
+            button{
                 border-radius: 10px;
                 padding: 10px 15px 10px 15px;
                 background-color: #020076;
@@ -413,8 +413,7 @@ main{
             }
         }
         #shadow{
-            box-shadow: 1px 3px 7px 1px rgba(132, 206, 255, 0.404);
+            box-shadow: 1px 3px 7px 1px rgba(132, 206, 255, 0.404)
         }
-
-}
+    }
 }

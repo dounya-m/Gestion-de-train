@@ -6,6 +6,14 @@
     $data = $rechercheVoyage->findVoyage();
 }
 ?>
+<?php
+    
+    if(isset($_POST['reserver'])){
+
+    $reserver = new VoyageController();
+    $reserver->reserverDirection();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +47,7 @@
                 <p><?php echo $data[0]['gare_arr']; ?></p>
             </div>
         </section>
-
+    <form action="" method="post">
         <section class="resultats d-flex justify-content-center align-items-center m-3 mt-5">
         <?php foreach($data as $voyage):?>
             <div class="card" style="width: 25rem;">
@@ -56,15 +64,15 @@
             </div>
             <hr>
             <div class="classe d-flex justify-content-between">
-            <p>First Classe</p>
-            <p>220 DH</p>
+            <p>Prix</p>
+            <p><?php echo $voyage['prix']; ?>DH</p>
             </div>
-            <a href="#" class="btn btn-primary">Réserver</a>
+            <button class="btn btn-primary" name="reserver">Réserver</button>
         </div>
         </div>
             <?php endforeach?>
             </section>
-
+            </form>
 
     </main>
 
@@ -73,5 +81,16 @@
     include_once './views/includes/footer.php';
     ?>
     </section>
+
+    <script>
+                let form = document.getElementById('form');
+        let id = document.getElementById('id');
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault()
+            localStorage.setItem('voyage_id',id.value)
+        })
+
+    </script>
 </body>
 </html>

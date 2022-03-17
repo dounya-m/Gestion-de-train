@@ -1,3 +1,19 @@
+<?php
+
+    if(isset($_POST['signOut'])){
+        $logOutAdmin = new clientController;
+        $logOutAdmin->clientSignOut();
+    }
+?>
+<?php
+
+if(isset($_POST['signIn'])){
+    header('location: ./signIn');
+}elseif(isset($_POST['signUp'])){
+    header('location: ./signUp');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +41,23 @@
             <a href="">text</a>
             <a href="">text</a>
             <a href="">text</a>
+            <form action="" method="post">
+            <?php if(!isset($_SESSION['signIn'])) { ?>
             <div class="nav-button">
-            <input class="btn btn-primary btn-outline-light " type="submit"  name="signUp" value="Sign Up">
-            <input class="btn btn-outline-primary" type="submit" name="signIn" value="Sign In">
+            <button class="btn btn-primary btn-outline-light " type="submit"  name="signUp">Sign UP</button>
+            <button class="btn btn-outline-primary" type="submit" name="signIn"> Sign In</button>
             </div>
+            <?php } ?>
+            </form>
+            <form action="" method="post">
+            <?php if(isset($_SESSION['signIn'])) { ?>
+            <div class="nav-button">
+            <input class="btn btn-primary btn-outline-light " type="submit"  name="signOut" value="Sign Out">
+            <!-- <input class="btn btn-outline-primary" type="submit" name="signIn" value="Sign In"> -->
             </div>
+            <?php } ?>
+            </div>
+        </form>
         </div>
     </nav>
 

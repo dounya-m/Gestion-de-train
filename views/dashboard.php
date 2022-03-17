@@ -30,6 +30,7 @@
                         <th scope="col">Nom Train</th>
                         <th scope="col">1ere classe</th>
                         <th scope="col">2eme classe</th>
+                        <th scope="col">Prix</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +45,7 @@
                     <td><?php echo $voyage['nom']; ?></td>
                     <td><?php echo $voyage['first_class']; ?></td>
                     <td><?php echo $voyage['second_class']; ?></td>
+                    <td><?php echo $voyage['prix']; ?>dh</td>
 
                     
                 <td class="d-flex">

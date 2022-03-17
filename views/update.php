@@ -1,5 +1,5 @@
-<?php
-    include_once './views/includes/navBare.php';
+<?php 
+    include_once './views/includes/dashboardNav.php';
 ?>
 <?php
 
@@ -18,8 +18,6 @@ if(isset($_POST['submit'])){
     $existVoyage -> updateOneVoyage();
 
 }  
-
-// die(var_dump($voyage));
 ?>
 
 <div class="form">
@@ -27,7 +25,7 @@ if(isset($_POST['submit'])){
         <div class="col-md-7 mt-5 mb-5 mx-auto">
             <div class="card">
                 <div class="card-body m-4">
-                <a href="<?php echo BASE_URL;?>" class="">
+                <a href="http://localhost/gestionTrain/dashboard" class="">
                     <i class="fas fa-home"></i>
                 </a>
                 <form method="post">
@@ -60,6 +58,11 @@ if(isset($_POST['submit'])){
                         <input type="text" name="timeArr" class="form-control" placeholder="Heur d'arrivée"
                         value="<?php echo $voyage->heur_arriver; ?>">
                     </div>
+                    <div class="form-group">
+                        <label for="heur_depart">Prix</label>
+                        <input type="number" name="prix" class="form-control" placeholder="Prix..."
+                        value="<?php echo $voyage->prix; ?>">
+                    </div>
 
                     <div class="form-group">
                         <label for="train">N° du Train</label>
@@ -85,6 +88,3 @@ if(isset($_POST['submit'])){
         </div>
     </div>
 </div>
-<?php
-    include_once './views/includes/footer.php';
-?>

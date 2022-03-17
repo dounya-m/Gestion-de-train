@@ -22,9 +22,9 @@ class Voyage{
 
             
     $stmt = Db::connect()->prepare('INSERT INTO voyage
-    (heur_depart ,heur_arriver ,date ,train ,gare_dep ,gare_arr)
+    (heur_depart ,heur_arriver ,date ,train ,gare_dep ,gare_arr,prix)
 
-    VALUES (?,?,?,?,?,?)');
+    VALUES (?,?,?,?,?,?,?)');
     
     $stmt->bindParam(1, $data['heur_depart']);
     $stmt->bindParam(2, $data['heur_arriver']);
@@ -32,6 +32,7 @@ class Voyage{
     $stmt->bindParam(4, $data['train']);
     $stmt->bindParam(5, $data['gare-dep']);
     $stmt->bindParam(6, $data['gare-arr']);
+    $stmt->bindParam(7, $data['prix']);
 
 
         if($stmt->execute()){
@@ -83,7 +84,7 @@ class Voyage{
     static public function update($data){
         $id = $data['id'];
         $stmt = Db::connect()->prepare('UPDATE voyage SET heur_depart=:heur_depart, heur_arriver=:heur_arriver, train=:train, 
-                                        date=:date, gare_dep=:gare_dep, gare_arr=:gare_arr WHERE id=:id ');
+                                        date=:date, gare_dep=:gare_dep, gare_arr=:gare_arr, prix=:prix WHERE id=:id ');
 
             $stmt->bindParam(':id', $data['id']);
             $stmt->bindParam(':heur_depart', $data['heur_depart']);
@@ -92,6 +93,7 @@ class Voyage{
             $stmt->bindParam(':train', $data['train']);
             $stmt->bindParam(':gare_dep', $data['gare-dep']);
             $stmt->bindParam(':gare_arr', $data['gare-arr']);
+            $stmt->bindParam(':prix', $data['prix']);
     
     
     

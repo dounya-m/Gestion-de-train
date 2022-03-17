@@ -76,7 +76,7 @@
     <section class="bottom d-flex justify-content-between m-5">
         <h4 >All right reserved @NRSMoffice.2022</h4>
         <div class="bottom-items">
-            <a href="">Services</a>
+            <a href="http://localhost/gestionTrain/login">Services</a>
             <a href="">Partners</a>
             <a href="">Feedbacks</a>
             <a href="">Booking</a>

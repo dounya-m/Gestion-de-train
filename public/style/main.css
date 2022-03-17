@@ -356,7 +356,7 @@ main {
   margin-bottom: 1vw;
 }
 
-.recherchResult .resultats .card a {
+.recherchResult .resultats .card button {
   border-radius: 10px;
   padding: 10px 15px 10px 15px;
   background-color: #020076;

@@ -27,10 +27,17 @@
 <section class="head d-flex">
 <div class="head_description">
     <h1>Wher do you want to go?</h1>
+    <?php if(!isset($_SESSION['signIn'])) { ?>
     <div class="head_button">
-    <button type="button" class="btn btn-primary btn-lg">Sign Up</button>
+    <button type="button" class="btn btn-primary btn-lg">SignN Up</button>
     <button type="button" class="btn btn-outline-light btn-lg">Sign In</button>
     </div>
+    <?php } ?>
+    <?php if(isset($_SESSION['signIn'])) { ?>
+    <div class="head_button">
+    <button type="button" class="btn btn-primary btn-lg">SignN Out</button>
+    </div>
+    <?php } ?>
     <div class="head-description d-flex flex-column">
     <div class= "d-flex">
             <h3>120m+</h3>

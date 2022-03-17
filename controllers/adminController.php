@@ -21,11 +21,6 @@ class adminController {
     // else{
     //     Redirect::to('login');
     // }
-
-
-
-
-
     
 }
 

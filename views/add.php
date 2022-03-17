@@ -1,6 +1,4 @@
-<?php
-    include_once './views/includes/navBare.php';
-?>
+
 <?php
     if(isset($_POST['submit'])){
 
@@ -9,12 +7,17 @@
 }
 ?>
 
+
+<?php 
+    include_once './views/includes/dashboardNav.php';
+?>
+
 <div class="form">
     <div class="row my-4">
         <div class="col-md-7 mt-5 mb-5 mx-auto">
             <div class="card">
                 <div class="card-body m-4">
-                <a href="<?php echo BASE_URL;?>" class="">
+                <a href="http://localhost/gestionTrain/dashboard" class="">
                     <i class="fas fa-home"></i>
                 </a>
                 <form method="post">
@@ -44,6 +47,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="heur_depart">Prix</label>
+                        <input type="number" name="prix" class="form-control" placeholder="Prix...">
+                    </div>
+
+                    <div class="form-group">
                         <label for="train">N° du Train</label>
                         <select name="Ntrain" id="Ntrain" class="form-control">
                             <option value="#">select</option>
@@ -66,6 +74,3 @@
         </div>
     </div>
 </div>
-<?php
-    include_once './views/includes/footer.php';
-?>
