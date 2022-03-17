@@ -417,3 +417,45 @@ main{
         }
     }
 }
+
+
+// --------------------------------------------
+// *******************reservation******************
+// ---------------------------------------------
+
+.voyageurInfo{
+background-color: #ffffff;
+padding: 3vw 2vw 5vw 2vw;
+border: solid 1px rgb(207, 225, 255);
+border-radius: 45px;
+h1{
+    color: #020076;
+    font-weight: 600;
+}
+h4{
+    color: #6e6e6e;
+    font-weight: 300
+}
+
+    .information_form{
+        background-color: #f7faff;
+        border-radius: 35px;
+        padding: 3vw 0 5vw 0;
+        input{
+        height: 3vw;
+        width: 15vw;
+        border-radius: 10px;
+    }
+    }
+}
+.info{
+    gap: 3vw;
+    align-items: center;
+    background: #f5f7ffb4;
+    padding: 2vw 0 2vw 0;
+    border-radius: 25px;
+    box-shadow: 1px 1px 9px 1px rgba(188, 217, 255, 0.63);
+h3 , h2 , p{
+    color: #020076;
+}
+}

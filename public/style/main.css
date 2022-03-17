@@ -423,4 +423,49 @@ main .identifier #shadow {
   -webkit-box-shadow: 1px 3px 7px 1px rgba(132, 206, 255, 0.404);
           box-shadow: 1px 3px 7px 1px rgba(132, 206, 255, 0.404);
 }
+
+.voyageurInfo {
+  background-color: #ffffff;
+  padding: 3vw 2vw 5vw 2vw;
+  border: solid 1px #cfe1ff;
+  border-radius: 45px;
+}
+
+.voyageurInfo h1 {
+  color: #020076;
+  font-weight: 600;
+}
+
+.voyageurInfo h4 {
+  color: #6e6e6e;
+  font-weight: 300;
+}
+
+.voyageurInfo .information_form {
+  background-color: #f7faff;
+  border-radius: 35px;
+  padding: 3vw 0 5vw 0;
+}
+
+.voyageurInfo .information_form input {
+  height: 3vw;
+  width: 15vw;
+  border-radius: 10px;
+}
+
+.info {
+  gap: 3vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f7ffb4;
+  padding: 2vw 0 2vw 0;
+  border-radius: 25px;
+  -webkit-box-shadow: 1px 1px 9px 1px rgba(188, 217, 255, 0.63);
+          box-shadow: 1px 1px 9px 1px rgba(188, 217, 255, 0.63);
+}
+
+.info h3, .info h2, .info p {
+  color: #020076;
+}
 /*# sourceMappingURL=main.css.map */
