@@ -30,7 +30,7 @@
         </section>
         
         <div class="form-group">
-        <button type="submit" class="btn btn-light" name="submit">Log Out</button>
+        <button type="submit" class="btn btn-light" name="submit"><a href="./login">Log Out</a></button>
         </div>
     </nav>
 </body>

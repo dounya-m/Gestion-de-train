@@ -37,10 +37,10 @@ if(isset($_POST['signIn'])){
         </div>
         <div class="nav-itemes p-2">
             <div class="nav-itemes-gap d-flex align-items-center ">
-            <a href="">Home</a>
-            <a href="">text</a>
-            <a href="">text</a>
-            <a href="">text</a>
+            <a href="./landing">Home</a>
+            <a href="#form">Booking</a>
+            <a href="#middle_card">Popular</a>
+            <a href="">Contact</a>
             <form action="" method="post">
             <?php if(!isset($_SESSION['signIn'])) { ?>
             <div class="nav-button">

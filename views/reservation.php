@@ -1,15 +1,17 @@
 <?php 
     include_once './views/includes/navBare.php';
+
 ?>
+
 
 <body>
 
 
 <section class="info d-flex justify-content-center mt-5 mx-auto col-6">
-    <h3>Csablanca</h3>
-    <h3>Oujda</h3>
+    <h3><?=$_GET["depart"]?></h3>
+    <h3><?=$_GET["arrive"]?></h3>
     <div class="prix">
-        <p class="mt-3">120Dh</p>
+        <p class="mt-3"><?=$_GET["prix"]?>Dh</p>
     </div>
 </section>
 

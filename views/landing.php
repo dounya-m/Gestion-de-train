@@ -4,7 +4,6 @@
 
 <?php
     if(isset($_POST['submit'])){
-
     $rechercheVoyage = new VoyageController();
     $rechercheVoyage->findVoyage();
 
@@ -55,6 +54,7 @@
 </section>
 <section class="form d-flex align-items-center justify-content-center" id="form">
       <form method="post" class="form-inline" action="rechercheResultat"> 
+
         <div class="form-group">
             <label for="date">Date de voyage</label>
             <input type="date" name="date" class="form-control m-2" placeholder="Date">

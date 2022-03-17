@@ -40,6 +40,11 @@
             </div>
     </section>
     <section class="right d-flex flex-column">
+        <div class="mb-3 align-self-end">
+        <a href="http://localhost/gestionTrain/landing" class="">
+                    <i class="fas fa-home"></i>
+                </a>
+        </div>
         <div class="right-title">
         <img class="w-25" src="./public/images/LOGO_blue.svg" alt="logo">
         <div class="title">

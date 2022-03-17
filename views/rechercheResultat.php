@@ -1,7 +1,6 @@
 <?php
     
-    if(isset($_POST['submit'])){
-
+        if(isset($_POST['submit'])){
     $rechercheVoyage = new VoyageController();
     $data = $rechercheVoyage->findVoyage();
 }
@@ -12,6 +11,11 @@
 
     $reserver = new VoyageController();
     $reserver->reserverDirection();
+}
+
+if(isset($_POST['id'])){
+
+
 }
 ?>
 
@@ -47,7 +51,7 @@
                 <p><?php echo $data[0]['gare_arr']; ?></p>
             </div>
         </section>
-    <form action="" method="post">
+    <!-- <form action="" method="post"> -->
         <section class="resultats d-flex justify-content-center align-items-center m-3 mt-5">
         <?php foreach($data as $voyage):?>
             <div class="card" style="width: 25rem;">
@@ -67,7 +71,9 @@
             <p>Prix</p>
             <p><?php echo $voyage['prix']; ?>DH</p>
             </div>
-            <button class="btn btn-primary" name="reserver">Réserver</button>
+            <form action="" method="post">
+            <a href="./reservation?id=<?=$voyage['id']?>&depart=<?=$voyage["gare_dep"]?>&arrive=<?=$voyage["gare_arr"]?>&prix=<?=$voyage["prix"]?>" class="btn btn-primary" name="reserver" >Réserver</a>
+            <!-- </form> -->
         </div>
         </div>
             <?php endforeach?>
@@ -83,13 +89,17 @@
     </section>
 
     <script>
-                let form = document.getElementById('form');
+        let form = document.getElementById('form');
         let id = document.getElementById('id');
 
         form.addEventListener('submit', (e)=>{
             e.preventDefault()
             localStorage.setItem('voyage_id',id.value)
         })
+
+
+        storage.setItem("reservationId", );
+
 
     </script>
 </body>
