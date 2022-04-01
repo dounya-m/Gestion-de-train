@@ -25,22 +25,22 @@
 <div class="d-flex justify-content-center mt-5">
 <div class="form-group mr-5">
         <label for="inputnom">Mon nom</label>
-        <input type="text" class="form-control" id="inputEmail" name="nom" placeholder="nom">
+        <input type="text" class="form-control" id="inputEmail" name="nom" placeholder="nom" required="required">
     </div>
     <div class="form-group ml-5">
         <label for="inputprenom">Mon prénom</label>
-        <input type="text" class="form-control" id="inputEmail" name="prenom" placeholder="prénom">
+        <input type="text" class="form-control" id="inputEmail" name="prenom" placeholder="prénom" required="required">
     </div>
     </div>
 
     <div class="d-flex justify-content-center mt-5">
     <div class="form-group mr-5">
         <label for="inputdate">Numéro de Téléphone</label>
-        <input type="text" class="form-control" id="inputEmail" name="date" placeholder="Téléphone">
+        <input type="text" class="form-control" id="inputEmail" name="date" placeholder="Téléphone" required="required">
     </div>
     <div class="form-group ml-5">
         <label for="inputdate">Mon email</label>
-        <input type="email" class="form-control" id="inputEmail" name="date" placeholder="Téléphone">
+        <input type="email" class="form-control" id="inputEmail" name="date" placeholder="Téléphone" required="required">
     </div>
     </div>
     <!-- <input type="submit" name="submit" class="btn btn-primary mt-2 "></button> -->
@@ -56,23 +56,24 @@
 <div class="d-flex flex-column justify-content-center mt-2">
 <div class="form-group mr-2">
         <label for="inputnom">Nom du porteur de la carte</label>
-        <input type="text" class="form-control" id="inputEmail" name="nom" placeholder="écrire...">
+        <input type="text" class="form-control" id="inputEmail" name="nom" placeholder="écrire..." required="required">
     </div>
     <div class="form-group ml-2">
         <label for="inputprenom">Numéro de carte de paiement</label>
-        <input type="text" class="form-control" id="inputEmail" name="prenom" placeholder="écrire...">
+        <input type="text" class="form-control" id="inputEmail" name="prenom" placeholder="écrire..." required="required">
     </div>
     <div class="form-group ml-2">
         <label for="inputprenom">Date d'expiration</label>
-        <input type="date" class="form-control" id="inputEmail" name="prenom" placeholder="prénom">
+        <input type="date" class="form-control" id="inputEmail" name="prenom" placeholder="prénom" required="required">
     </div>
     <div class="form-group ml-2">
         <label for="inputprenom">Code de verification</label>
-        <input  type="text" class="form-control" id="inputEmail" name="prenom" placeholder="code..">
+        <input  type="text" class="form-control" id="inputEmail" name="prenom" placeholder="code.." required="required">
     </div>
     </div>
 
-    <input type="submit" name="submit" class="btn btn-primary mt-2 "></button>
+   <!-- <a href="./check"><input type="submit" name="submit" class="btn btn-primary mt-2 "></input> </a> -->
+   <a href="./check" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Envoyre</a>
 </div>
 
 </form>

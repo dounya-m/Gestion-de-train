@@ -57,15 +57,15 @@
 
         <div class="form-group">
             <label for="date">Date de voyage</label>
-            <input type="date" name="date" class="form-control m-2" placeholder="Date">
+            <input type="date" name="date" class="form-control m-2" placeholder="Date" required="required">
         </div>
         <div class="form-group">
                 <label for="gare-dep">Gare de depart</label>
-                <input type="text" name="gare_dep" class="form-control m-2" placeholder="Gare de depart">
+                <input type="text" name="gare_dep" class="form-control m-2" placeholder="Gare de depart" required="required">
         </div>
         <div class="form-group">
                 <label for="gare-dep">Gare d'Arriver</label>
-                <input type="text" name="gare_arr" class="form-control m-2" placeholder="Gare de depart">
+                <input type="text" name="gare_arr" class="form-control m-2" placeholder="Gare de depart" required="required">
         </div>
         <!-- <div class="select_form d-flex">
         <div class="form-check">

@@ -21,6 +21,6 @@
     </div>
     <div class="d-flex">
         <h1>Bon Voyage</h1>
-       <a href="./landing" class="mt-2 ml-4"> <img src="./public/icones/sign-out.svg" alt="" style="width: 2vw"></a>
+       <a href="./landing"> <img src="./public/icones/sign-out.svg" alt="" style="width: 2vw"></a>
     </div>
     </body>
