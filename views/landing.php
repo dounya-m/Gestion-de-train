@@ -57,7 +57,7 @@
 
         <div class="form-group">
             <label for="date">Date de voyage</label>
-            <input type="date" name="date" class="form-control m-2" placeholder="Date" required="required">
+            <input id="current_date" type="date" name="date" class="form-control m-2" placeholder="Date" required="required">
         </div>
         <div class="form-group">
                 <label for="gare-dep">Gare de depart</label>
@@ -119,7 +119,7 @@
   <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="./public/images/C.webp" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Fès</h5>
+    <h5 class="card-title">Oujda</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#form" class="btn btn-primary">Réservée</a>
   </div>
@@ -133,5 +133,27 @@
     ?>
     </section>
 
+      <script>
+      date = new Date();
+      var tdate = date.getDate();
+      var tmonth = date.getMonth() +1;
+      if(tdate < 10){
+        tdate = '0' + tdate;
+      }
+      if(tmonth < 10){
+        tmonth = '0' + tmonth;
+      }
+      var year = date.getUTCFullYear();
+      var maxMont = 0 + +tmonth + +1;
+      if(maxMont < 10){
+        maxMont = '0' + maxMont;
+      }
+      var minDate = year + '-' + tmonth + '-' + tdate;
+      var maxDate = year + '-' + maxMont + '-' + tdate;
+      document.getElementById('current_date').setAttribute('min', minDate);
+      document.getElementById('current_date').setAttribute('max', maxDate);
+      console.log(maxDate);
+
+      </script>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    <footer class="m-5 ">
+    <footer class="">
         <section class="height row m-5">
 
         <div class="discription col">

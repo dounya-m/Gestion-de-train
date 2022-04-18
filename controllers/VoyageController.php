@@ -89,10 +89,17 @@
                 'date' => $_POST['date'],
                 'gare_dep' => $_POST['gare_dep'],
                 'gare_arr' => $_POST['gare_arr']
-        );
+            );
                 return $voyages = voyage::recherche($data);
-            }
+                
+            //     if($voyages === 'ok'){
+            //         var_dump($voyages);
+            //         header('location: .rechercheResultat');
+            // }else{
+            // // header('location: ./landing');
+            // }
         }
+    }
 
         public function reserverDirection(){
             if(isset($_SESSION['signIn'])) {

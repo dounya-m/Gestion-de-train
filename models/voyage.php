@@ -55,7 +55,8 @@ class Voyage{
 
         }catch(PDOException $ex){
 
-            echo 'erreur' . $ex->$getMessage;
+            echo 'erreur';
+            // . $ex->$getMessage
         }
     }
 
@@ -118,8 +119,7 @@ class Voyage{
 
                     }catch(PDOException $ex){
     
-                        echo 'erreur' . $ex->getMessage();
-    
+                        echo 'erreur';
             }
 
         }

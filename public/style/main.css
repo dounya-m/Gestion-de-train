@@ -302,6 +302,8 @@ main {
 }
 
 .middle .middle_card {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 3vw;
   margin-bottom: 8vw;
 }
@@ -493,6 +495,48 @@ main .identifier #shadow {
 
 .info h3, .info h2, .info p {
   color: #020076;
+}
+
+.card_tycket {
+  background-color: #e4eeff;
+  border: none;
+  border-radius: 25px;
+  padding: 2vw;
+  margin: 7vw;
+}
+
+.card_tycket .inner_card {
+  border-radius: 25px;
+  background-color: white;
+  padding: 1vw;
+}
+
+.card_tycket .inner_card .card_header {
+  border-bottom: solid 1px #b9b5ff;
+  padding-bottom: 1vw;
+}
+
+.card_tycket .inner_card .card_header img {
+  width: 10vw;
+}
+
+.card_tycket .inner_card h3 {
+  font-weight: 600;
+  color: #020076;
+  margin-top: 2vw;
+}
+
+.card_tycket .inner_card .card_corp {
+  margin-top: 1vw;
+  padding: 2vw;
+}
+
+.card_tycket .inner_card .card_corp .corp_itemes {
+  gap: 1vw;
+}
+
+.card_tycket .inner_card .card_corp .corp_itemes p {
+  font-size: 20px;
 }
 
 .tycket .distination {
