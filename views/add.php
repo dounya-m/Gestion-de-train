@@ -23,7 +23,7 @@
                 <form method="post">
                     <div class="form-group mt-4">
                         <label for="date">Date de voyage</label>
-                        <input type="date" name="date" class="form-control" placeholder="Date" required>
+                        <input id="current_date" type="date" name="date" class="form-control" placeholder="Date" required>
                     </div>
 
                     <div class="form-group">
@@ -72,5 +72,28 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div>
+    <script>
+        date = new Date();
+        var tdate = date.getDate();
+        var tmonth = date.getMonth() +1;
+        if(tdate < 10){
+            tdate = '0' + tdate ;
+        }
+        if(tmonth < 10){
+            tmonth = '0' + tmonth;
+        }
+        var year = date.getUTCFullYear();
+        var maxMont = 0 + +tmonth + +1;
+        var tomorrow = tdate + 1;
+        if(maxMont < 10){
+            maxMont = '0' + maxMont;
+        }
+        var minDate = year + '-' + tmonth + '-' + tomorrow;
+        var maxDate = year + '-' + maxMont + '-' + tdate;
+        document.getElementById('current_date').setAttribute('min', minDate);
+        document.getElementById('current_date').setAttribute('max', maxDate);
+        console.log(maxDate);
+
+        </script> -->
 </div>

@@ -19,7 +19,23 @@ class BilletController{
             }
         }
     }
-}
+
+    public function getOneBillet(){
+        if(isset($_POST['submit'])){
+            $data = array(
+                'id' => $_POST['id'],
+            );
+            
+            $billet = Billet::getBillet($_POST["id"]);
+                return $billet;
+            }
+        }
+
+
+
+
+        
+    }
 
 
 

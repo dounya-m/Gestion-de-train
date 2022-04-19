@@ -10,9 +10,7 @@ $button-color: #2639ED;
     font-family: "Poppins", sans-serif;
     }
 
-    main{
-        height: 90vw;
-    }
+
 
     .gif{
         display: flex;
@@ -267,7 +265,7 @@ h1{
     // background: linear-gradient(10deg, #e0deffd8, transparent);
     position: inherit;
     background: white;
-    box-shadow: -18px 2px 9px 5px rgb(188 217 255 / 71%);
+    box-shadow: -18px 2px 9px 5px rgba(188, 217, 255, 0.769);
     padding: 2vw !important;
     label{
         color: rgb(26, 32, 59);

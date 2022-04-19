@@ -82,6 +82,16 @@
 
         }
 
+        public function deleteVoyageOld(){
+            if(isset($_POST['submit'])){
+                $data['id'] = $_POST['id'];
+                $result = voyage::atodelet($data);
+                if($result === 'ok'){
+                    header('location: ./dashboard');
+            }
+        }
+
+        }
 
         public function findVoyage(){
             if(isset($_POST['submit'])){
@@ -90,14 +100,10 @@
                 'gare_dep' => $_POST['gare_dep'],
                 'gare_arr' => $_POST['gare_arr']
             );
-                return $voyages = voyage::recherche($data);
-                
-            //     if($voyages === 'ok'){
-            //         var_dump($voyages);
-            //         header('location: .rechercheResultat');
-            // }else{
-            // // header('location: ./landing');
-            // }
+            if($voyages = voyage::recherche($data))
+            return $voyages;
+            else 
+            header('location:http://localhost/gestionTrain/');
         }
     }
 

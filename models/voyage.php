@@ -80,6 +80,22 @@ class Voyage{
 
         }
     }
+    static public function atodelet(){
+        try{
+            $query = 'DELETE  FROM voyage WHERE date < NOW()';
+            $stmt = Db::connect()->prepare($query);
+            $stmt->execute(array());
+
+                if($stmt->execute()){
+                    return 'ok';
+
+                } 
+                }catch(PDOException $ex){
+
+                    echo 'erreur' . $ex->getMessage();
+    }
+
+    }
 
 
     static public function update($data){

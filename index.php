@@ -32,13 +32,12 @@ require_once './controllers/homeController.php';
             include('views/includes/404.php');
             return;
         }
-
         $home->index($page);
-
-
 
     }
     
+
+ 
     // if(isset($_SESSION['login']) === true){
     //     if(isset($_GET['page'])){
     //             if(in_array($_GET['page'],$pages)){

@@ -9,6 +9,10 @@
     $voyages = $data->getAllVoyage();
 
 ?>
+<?php
+    $date  = new VoyageController();
+    $delete = $date->deleteVoyageOld();
+?>
     <section class= "d-flex" >
 <div class="container col-12 ">
     <div class="row">
@@ -18,7 +22,7 @@
             <a href="<?php echo BASE_URL;?>add" class="">
                 <i class="fas fa-plus"></i>
             </a>
-            <table class="table mt-5 table-hover">
+            <table class="table  mt-5 table-hover mx-auto">
                 <thead>
                     <tr class="row">
                         <th scope="col">Date</th>
@@ -35,7 +39,7 @@
                 </thead>
                 <tbody>
                 <?php foreach($voyages as $voyage):?>
-                <tr  class="row">>
+                <tr  class="row">
                     <th><?php echo $voyage['date']; ?></th>
                     <td class="text-center col"><?php echo $voyage['heur_depart']; ?></td>
                     <td class="text-center col"><?php echo $voyage['heur_arriver']; ?></td>
@@ -63,6 +67,9 @@
                 </tr>
                 <?php endforeach?>
                 </tbody>
+                <form action="" method="post">
+                        <button class="btn btn-sm btn-primary ml-3" type="submit" name="submit">delete older</button>
+                    </form>
             </table>
         </div>
         </div>

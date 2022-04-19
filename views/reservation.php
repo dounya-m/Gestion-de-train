@@ -28,7 +28,7 @@
         <h4>J'enregistre les informations voyageurs</h4>
 </div>
 
-<form method="post" class="information_form d-flex flex-column mt-5 align-items-center" id="signUp">
+<form method="post"  class="information_form d-flex flex-column mt-5 align-items-center" id="signUp">
 
         <div class="d-flex justify-content-center mt-5">
         <div class="form-group mr-5">
@@ -59,7 +59,7 @@
                 <h1>Demande de paiement</h1>
         </div>
 
-            <div method="post" class="information_form d-flex flex-column mt-5 align-items-center" id="signUp">
+            <div method="post" action class="information_form d-flex flex-column mt-5 align-items-center" id="signUp">
 
         <div class="d-flex flex-column justify-content-center mt-2">
         <div class="form-group mr-2">
@@ -82,7 +82,8 @@
 
             <!-- <a href="./check"><input type="submit" name="submit" class="btn btn-primary mt-2 "></input> </a> -->
             <button type="submit" name="submit"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" value="<?php $newBillet['id'] ?>" >
-                Envoyre</button>
+                Envoyre
+            </button>
         </div>
 
 </form>

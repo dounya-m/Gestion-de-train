@@ -7,10 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-main {
-  height: 90vw;
-}
-
 .gif {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,8 +228,8 @@ main {
   background-size: cover;
   padding-top: 13vw;
   padding-left: 5vw;
-  -webkit-box-shadow: 12px 11px 16px 9px #0084ff7d;
-          box-shadow: 12px 11px 16px 9px #0084ff7d;
+  -webkit-box-shadow: -14px 11px 16px 9px #0084ff7d;
+          box-shadow: -14px 11px 16px 9px #0084ff7d;
   margin-top: 1vw;
 }
 
@@ -263,9 +259,10 @@ main {
 
 .form {
   gap: 2vw;
+  position: inherit;
   background: white;
-  -webkit-box-shadow: 1px 1px 9px 5px rgba(188, 217, 255, 0.705);
-          box-shadow: 1px 1px 9px 5px rgba(188, 217, 255, 0.705);
+  -webkit-box-shadow: -18px 2px 9px 5px rgba(188, 217, 255, 0.769);
+          box-shadow: -18px 2px 9px 5px rgba(188, 217, 255, 0.769);
   padding: 2vw !important;
 }
 

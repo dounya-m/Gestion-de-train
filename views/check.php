@@ -1,12 +1,11 @@
 <?php
 
 
-if(isset($_POST["id"])){
+if(isset($_GET["submit"])){
 
-    $billet = new BilletController();
-    $billetForm = $billet->insertBillet();
+    $newBillet = new BilletController();
+    $data = $newBillet->getOneBillet();
 } 
-echo "hello" .$billetForm;
 
 ?>
     <body>
@@ -26,11 +25,11 @@ echo "hello" .$billetForm;
             <div class="card_corp d-flex justify-content-center justify-content-around ">
                 <div class="corp_itemes d-flex ">
                     <p class="font-weight-bold">Nom:</p>
-                    <p>Mellouki</p>
+                    <p><?php echo $data->nom; ?></p>
                 </div>
                 <div class="corp_itemes d-flex ">
                     <p class="font-weight-bold">Prénom:</p>
-                    <p><?php echo $billetForm->prenom; ?></p>
+                    <p><?php echo $data['prenom']; ?></p>
                 </div>
             </div>
 
