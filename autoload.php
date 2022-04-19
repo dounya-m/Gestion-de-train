@@ -12,6 +12,7 @@
             'app/classes',
             'models/',
             'controllers/',
+            'views/',
         );
 
         $parts = explode('\\',$class_name);

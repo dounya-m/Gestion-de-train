@@ -8,8 +8,8 @@
 
 <?php 
     include_once './views/includes/navBare.php';
-
 ?>
+
 
 <body>
 
@@ -28,7 +28,7 @@
         <h4>J'enregistre les informations voyageurs</h4>
 </div>
 
-<form method="post"  class="information_form d-flex flex-column mt-5 align-items-center" id="signUp">
+<form method="post" class="information_form d-flex flex-column mt-5 align-items-center" id="signUp">
 
         <div class="d-flex justify-content-center mt-5">
         <div class="form-group mr-5">
@@ -81,7 +81,7 @@
             </div>
 
             <!-- <a href="./check"><input type="submit" name="submit" class="btn btn-primary mt-2 "></input> </a> -->
-            <button type="submit" name="submit"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" value="<?php $newBillet['id'] ?>" >
+            <button type="submit" name="submit"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >
                 Envoyre
             </button>
         </div>
@@ -92,3 +92,4 @@
     include_once './views/includes/footer.php';
     ?>
 </body>
+

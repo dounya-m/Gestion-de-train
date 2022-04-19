@@ -7,20 +7,21 @@ static public function insert($data){
 
     
     $stmt = Db::connect()->prepare('INSERT INTO `billet`
-    (`id`, `nom`, `prenom`, `tele`, `email`) 
+    (`nom`, `prenom`, `tele`, `email` , `id_voyage`) 
     VALUES (?,?,?,?,?)');
-    $stmt->bindParam(1, $data['id']);
-    $stmt->bindParam(2, $data['nom']);
-    $stmt->bindParam(3, $data['prenom']);
-    $stmt->bindParam(4, $data['tele']);
-    $stmt->bindParam(5, $data['email']);
+    $stmt->bindParam(1, $data['nom']);
+    $stmt->bindParam(2, $data['prenom']);
+    $stmt->bindParam(3, $data['tele']);
+    $stmt->bindParam(4, $data['email']);
+    $stmt->bindParam(5, $data['id_voyage']);
+
 
         if($stmt->execute()){
             return 'ok';
         }else{
             return 'errore';
         }
-        $stmt->close();
+        // $stmt->close();
         $stmt = null;
 
 }
@@ -38,10 +39,24 @@ static public function getBillet($id){
 
         echo 'erreur' . $ex->$getMessage;
     }
-
-
-
 }
+
+static public function getLast(){
+    try{
+        $query ='SELECT * FROM billet ORDER BY id DESC LIMIT 0,1';
+        $stmt = Db::connect()->prepare($query);
+        $stmt->execute();
+        $billet = $stmt->fetch(PDO::FETCH_OBJ);
+        return $billet;
+
+    }catch(PDOException $ex){
+
+        echo 'erreur';
+        // . $ex->$getMessage
+    }
+}
+
+
 }
 
 

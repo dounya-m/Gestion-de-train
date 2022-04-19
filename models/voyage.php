@@ -139,6 +139,17 @@ class Voyage{
             }
 
         }
+        static public function resrrver($id){
+            $stmt = Db::connect()->prepare ('SELECT FROM voyage., train.id as train.first_class');
+            
+        if($stmt->execute()){
+            return 'ok';
+        }else{
+            return 'error';
+        }
+            $stmt->close();
+            $stmt = null;
+        }
 
         
     }

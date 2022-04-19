@@ -3,8 +3,9 @@
 class BilletController{
 
     public function insertBillet(){
-        if(isset($_POST['submit'])){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $data = array(
+                'id_voyage'=> $_GET['id'],
                 'nom'=> $_POST['nom'],
                 'prenom'=> $_POST['prenom'],
                 'tele'=> $_POST['tele'],
@@ -13,7 +14,18 @@ class BilletController{
 
             $result = Billet::insert($data);
             if($result === 'ok'){
-                header('location: ./check');
+                $res = Billet::getLast();
+                $data['id'] = $res->id;
+                $data['nom'] = $res->nom;
+                $data['prenom'] = $res->prenom;
+
+                $resV = Voyage::getVoyage($_GET['id']);
+                $data['gare_dep'] = $resV->gare_dep;
+                $data['gare_arr'] = $resV->gare_arr;
+                $data['prix'] = $resV->prix;
+
+                include('views/check.php');
+                // header('location:http://localhost/gestionTrain/reservation');
             }else{
                 echo $result;
             }
