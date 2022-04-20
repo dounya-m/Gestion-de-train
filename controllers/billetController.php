@@ -11,24 +11,31 @@ class BilletController{
                 'tele'=> $_POST['tele'],
                 'email'=> $_POST['email']
             );
-
-            $result = Billet::insert($data);
-            if($result === 'ok'){
-                $res = Billet::getLast();
-                $data['id'] = $res->id;
-                $data['nom'] = $res->nom;
-                $data['prenom'] = $res->prenom;
-
-                $resV = Voyage::getVoyage($_GET['id']);
-                $data['gare_dep'] = $resV->gare_dep;
-                $data['gare_arr'] = $resV->gare_arr;
-                $data['prix'] = $resV->prix;
-
-                include('views/check.php');
-                // header('location:http://localhost/gestionTrain/reservation');
+ 
+            $num = Billet::getNumberVoyage($_GET['id']);
+            
+            if($num->nomber < 200){
+                $result = Billet::insert($data);
+                if($result === 'ok'){
+                    $res = Billet::getLast();
+                    $data['id'] = $res->id;
+                    $data['nom'] = $res->nom;
+                    $data['prenom'] = $res->prenom;
+    
+                    $resV = Voyage::getVoyage($_GET['id']);
+                    $data['gare_dep'] = $resV->gare_dep;
+                    $data['gare_arr'] = $resV->gare_arr;
+                    $data['prix'] = $resV->prix;
+    
+                    include('views/check.php');
+                    // header('location:http://localhost/gestionTrain/reservation');
+                }else{
+                    echo $result;
+                } 
             }else{
-                echo $result;
+                header('location:http://localhost/gestionTrain/');
             }
+          
         }
     }
 

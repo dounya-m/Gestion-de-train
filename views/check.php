@@ -8,18 +8,17 @@
 // } 
 
 ?>
-
 <body>
     <section class="header">
         <?php
         include_once './views/includes/navBare.php';
         ?>
     </section>
-    <section class="card_tycket w-75 mx-auto">
+    <section class="card_tycket w-75 mx-auto" id="tycket"  onload="autoClick();">
         <div class="inner_card d-flex flex-column ">
             <div class="card_header d-flex align-items-center justify-content-center justify-content-between">
                 <img class="" src="./public/images/LOGO_blue.svg" alt="">
-                <p>N° <?php echo $data['id']; ?></p>
+                <p>N° <?php echo $_GET['id']; ?></p>
             </div>
             <h3 class="text-center">On Vous Souhaite Un Bon Voyage Sur Notre Ligne NSRM</h3>
 
@@ -48,11 +47,11 @@
                     <p><?php echo $data['prix']; ?>DH</p>
                 </div>
             </div>
-            <div class="d-flex">
+        </div>
+    </section>
+    <div class="d-flex justify-content-center">
                 <h1>Bon Voyage</h1>
                 <a href="./landing"> <img src="./public/icones/sign-out.svg" alt="" style="width: 2vw"></a>
             </div>
-        </div>
-    </section>
 </body>
 <!-- <img src="./public/images/train.gif" alt=""> -->

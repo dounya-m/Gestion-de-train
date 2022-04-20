@@ -57,6 +57,22 @@ static public function getLast(){
 }
 
 
+static public function getNumberVoyage($id){
+    try{
+        $query ="SELECT COUNT(*) as nomber FROM billet WHERE id_voyage like $id ";
+        $stmt = Db::connect()->prepare($query);
+        $stmt->execute();
+        $billet = $stmt->fetch(PDO::FETCH_OBJ);
+        return $billet;
+
+    }catch(PDOException $ex){
+
+        echo 'erreur';
+        // . $ex->$getMessage
+    }
+}
+
+
 }
 
 
