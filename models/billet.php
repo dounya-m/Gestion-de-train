@@ -7,13 +7,18 @@ static public function insert($data){
 
     
     $stmt = Db::connect()->prepare('INSERT INTO `billet`
-    (`nom`, `prenom`, `tele`, `email` , `id_voyage`) 
-    VALUES (?,?,?,?,?)');
+    (`nom`, `prenom`, `tele`, `email` , `id_voyage` , `id_client`) 
+    VALUES (?,?,?,?,?,?)');
     $stmt->bindParam(1, $data['nom']);
     $stmt->bindParam(2, $data['prenom']);
     $stmt->bindParam(3, $data['tele']);
     $stmt->bindParam(4, $data['email']);
     $stmt->bindParam(5, $data['id_voyage']);
+    if(isset($_SESSION['client_id']) && !empty($_SESSION['client_id'])){
+        $stmt->bindParam(6, $_SESSION['client_id']);
+    }else{
+        $stmt->bindParam(6, null);
+    }
 
 
         if($stmt->execute()){
@@ -37,7 +42,7 @@ static public function getBillet($id){
 
     }catch(PDOException $ex){
 
-        echo 'erreur' . $ex->$getMessage;
+        echo 'erreur' ;
     }
 }
 

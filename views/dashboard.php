@@ -22,33 +22,31 @@
             <a href="<?php echo BASE_URL;?>add" class="">
                 <i class="fas fa-plus"></i>
             </a>
-            <table class="table  mt-5 table-hover mx-auto">
+            <table class="table  mt-5 table-hover ">
                 <thead>
-                    <tr class="row">
+                    <tr class="row mx-auto">
                         <th scope="col">Date</th>
                         <th class="text-center col">Départ</th>
                         <th class="text-center col">Arrivée</th>
                         <th class="text-center col">de</th>
                         <th class="text-center col">à</th>
-                        <th class="text-center col">N° du Train</th>
                         <th class="text-center col">Nom Train</th>
-                        <th class="text-center col">1ere classe</th>
-                        <th class="text-center col">2eme classe</th>
+                        <th class="text-center col">N°de places</th>
                         <th class="text-center col">Prix</th>
+                        <th class="text-center col"></th>
+                        <th class="text-center col"></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach($voyages as $voyage):?>
-                <tr  class="row">
+                <tr  class="row mx-auto">
                     <th><?php echo $voyage['date']; ?></th>
                     <td class="text-center col"><?php echo $voyage['heur_depart']; ?></td>
                     <td class="text-center col"><?php echo $voyage['heur_arriver']; ?></td>
                     <td class="text-center col"><?php echo $voyage['gare_dep']; ?></td>
                     <td class="text-center col"><?php echo $voyage['gare_arr']; ?></td>
-                    <td class="text-center col"><?php echo $voyage['train']; ?></td>
                     <td class="text-center col"><?php echo $voyage['nom']; ?></td>
                     <td class="text-center col"><?php echo $voyage['first_class']; ?></td>
-                    <td class="text-center col"><?php echo $voyage['second_class']; ?></td>
                     <td class="text-center col"><?php echo $voyage['prix']; ?>dh</td>
 
                     

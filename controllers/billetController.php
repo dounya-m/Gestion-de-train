@@ -35,7 +35,7 @@ class BilletController{
             }else{
                 header('location:http://localhost/gestionTrain/');
             }
-          
+        
         }
     }
 

@@ -551,4 +551,10 @@ main .identifier #shadow {
   color: #6e6e6e;
   font-size: 22px;
 }
+
+.travels .travels_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=main.css.map */

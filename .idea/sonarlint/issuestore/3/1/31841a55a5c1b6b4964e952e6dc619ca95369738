@@ -1,0 +1,5 @@
+
+hphp:S101"TRename class "clientController" to match the regular expression ^[A-Z][a-zA-Z0-9]*$.(ĞèÏ„
+«	php:S2681"•This statement will not be executed conditionally; only the first statement of this 2-statement block will be. The rest will execute unconditionally.(Î÷¥
+6	php:S1110"!Remove these useless parentheses.(Î÷¥
+1	php:S1116"Remove this empty statement.(Î÷¥

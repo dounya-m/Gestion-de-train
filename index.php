@@ -12,7 +12,7 @@ require_once './controllers/homeController.php';
 
 
     $requireAuthPages = ['dashboard','add','update','delet'];
-    $normalPages = ['login','landing', 'rechercheResultat', 'signUp', 'signIn', 'reservation','afficheReservation','check'];
+    $normalPages = ['login','landing', 'rechercheResultat', 'signUp', 'signIn', 'reservation','afficheReservation','check', 'travels'];
 
     $_GET["page"] ??= "landing"; // if page doesnt exists in $_GET create it and assign 'landing' as its value
 

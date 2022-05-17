@@ -1,6 +1,6 @@
 <?php
 
-class adminController {
+class admincontroller {
 
     public function adminLogin(){
 

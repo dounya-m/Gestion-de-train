@@ -24,24 +24,20 @@ class clientController{
 
     public function clientSignIn(){
 
-        if(isset($_POST['submit'])){
+        if($_SERVER['REQUEST_METHOD']==='POST'){
 
-            $data['email'] = $_POST['usermail'];
+            $data['email'] = $_POST['email'];
+            $data['password'] = $_POST['password'];
             $result = Client::signIn($data);
-            if(($result->email === $_POST['email'] && password_verify($_POST['password'],$result->password)));{
-
+            if($result){
                 $_SESSION['signIn'] = true; 
                 $_SESSION['email']=$result->email;
+                $_SESSION['client_id']=$result->id;
                 header('location: ./landing');
-                }
-    // else{
-    //     Redirect::to('login');
-    // }
-    
-    }else{
-    header('location: ./signIn');
-        
-    }
+            }else{
+                header('location: ./signIn');
+            }
+        }
 
 }
     public function clientSignOut(){
@@ -54,6 +50,10 @@ class clientController{
     }
 
 
+    }
+
+    public function getTravles(){
+        return $travels = Client::getTravls();
     }
 
 }

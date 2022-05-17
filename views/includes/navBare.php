@@ -30,7 +30,7 @@ if(isset($_POST['signIn'])){
 </head>
 
 <body>
-
+   
     <nav class="d-flex align-items-center justify-content-around mt-3">
         <div class="nav-image p-2">
             <img class="w-50" src="./public/images/LOGO_blue.svg" alt="logo">
@@ -41,6 +41,7 @@ if(isset($_POST['signIn'])){
             <a href="#form">Booking</a>
             <a href="#middle_card">Popular</a>
             <a href="">Contact</a>
+
             <form action="" method="post">
             <?php if(!isset($_SESSION['signIn'])) { ?>
             <div class="nav-button">
@@ -49,15 +50,25 @@ if(isset($_POST['signIn'])){
             </div>
             <?php } ?>
             </form>
-            <form action="" method="post">
-            <?php if(isset($_SESSION['signIn'])) { ?>
-            <div class="nav-button">
-            <input class="btn btn-primary btn-outline-light " type="submit"  name="signOut" value="Sign Out">
-            <!-- <input class="btn btn-outline-primary" type="submit" name="signIn" value="Sign In"> -->
+
+
+            <div class="d-flexx">
+                    <form action="" method="post">
+                <?php if(isset($_SESSION['signIn'])) { ?>
+                <div class="nav-button">
+                <input class="btn btn-primary btn-outline-light " type="submit"  name="signOut" value="Sign Out">
+                <!-- <input class="btn btn-outline-primary" type="submit" name="signIn" value="Sign In"> -->
+                <?php } ?>
+            </form>
+
+            <form action="travels" method="">
+                <?php if(isset($_SESSION['signIn'])) { ?>
+                <div class="nav-button">
+                <input class="btn btn-primary btn-outline-light " type="submit"  name="signOut" value="Travels">
+                <!-- <input class="btn btn-outline-primary" type="submit" name="signIn" value="Sign In"> -->
+                <?php } ?>
+            </form>
             </div>
-            <?php } ?>
-            </div>
-        </form>
         </div>
     </nav>
 

@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-    <!-- </div>
+    </div>
     <script>
         date = new Date();
         var tdate = date.getDate();
@@ -95,5 +95,5 @@
         document.getElementById('current_date').setAttribute('max', maxDate);
         console.log(maxDate);
 
-        </script> -->
+        </script>
 </div>

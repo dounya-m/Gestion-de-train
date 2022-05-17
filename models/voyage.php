@@ -85,7 +85,6 @@ class Voyage{
             $query = 'DELETE  FROM voyage WHERE date < NOW()';
             $stmt = Db::connect()->prepare($query);
             $stmt->execute(array());
-
                 if($stmt->execute()){
                     return 'ok';
 

@@ -83,9 +83,11 @@
         }
 
         public function deleteVoyageOld(){
+
             if(isset($_POST['submit'])){
-                $data['id'] = $_POST['id'];
-                $result = voyage::atodelet($data);
+
+                // $data['id'] = $_POST['id'];
+                $result = voyage::atodelet( );
                 if($result === 'ok'){
                     header('location: ./dashboard');
             }
