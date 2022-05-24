@@ -6,7 +6,7 @@
 <?php
 
     $data = new VoyageController();
-    $voyages = $data->getAllVoyage();
+    $voyages = $data->getAllVoyageArchive();
 
 ?>
 <?php
@@ -21,9 +21,6 @@
         <div class=" mt-5  mx-auto">
         <div class="card">
                 <div class="card-body">
-            <a href="<?php echo BASE_URL;?>add" class="">
-                <i class="fas fa-plus"></i>
-            </a>
             <table class="table  mt-5 table-hover ">
                 <thead>
                     <tr class="row mx-auto">
@@ -53,26 +50,23 @@
 
                     
                 <td class="d-flex col">
-                <form action="update" method="post" >
+                    <form action="delet" method="post" >
                         <input type="hidden" name="id" 
                         value="<?php echo $voyage['id']; ?>">
-                        <button class="btn btn-sm btn-light">update</button>
+                        <button class="btn btn-sm btn-primary">delete</button>
                     </form>
-                    <form action="state" method="post" >
+                    <form action="" method="" >
                         <input type="hidden" name="id" 
                         value="<?php echo $voyage['id']; ?>">
-                        <button class="btn ml-2 mr-2 btn-sm btn-primary">Annuler</button>
+                        <button class="btn ml-2 mr-2 btn-sm btn-secondary">Annuler</button>
 
                     </form>
                 </td>
                 </tr>
                 <?php endforeach?>
                 </tbody>
-                <form action="" method="post">
-                        <button class="btn btn-sm btn-primary ml-3" type="submit" name="submit">delete older</button>
-                    </form>
-                    <form action="archive" method="post">
-                        <button class="btn btn-sm btn-primary ml-3" type="submit" name="submit"><a class="text-light" href="./archive">Archive</a></button>
+                <form action="" method="">
+                    <button class="btn btn-sm btn-primary ml-3" type="submit" name="submit"><a class="text-light" href="./dashboard">Dashboard</a></button>
                     </form>
             </table>
         </div>

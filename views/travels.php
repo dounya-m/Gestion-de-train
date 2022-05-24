@@ -7,12 +7,9 @@
         $loginAdmin = new clientController;
         $res = $loginAdmin->getTravles();
         arsort($res);
-        // if(isset($_POST('submit'))){
-        //     $die = $res->state;
-        //     $die = false;
-        // }
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +27,8 @@
 </head>
 <body>
 <?php foreach($res as $res):?>
-    <form action="" method="post">
+<form action="deletBillet" method="post" >
+
 <section class="voyageurInfo mx-auto col-10 col-lg-6 col-md-9 mt-5">
     <div>
         <h1>Votre Ticket</h1>
@@ -45,17 +43,15 @@
             <?php echo $res->date; ?>
             <p class="mr-4">action:</p>
         </div>
-        <?php 
-        $d=strtotime("now");
-        $dt = date("Y-m-d h:i:sa", $d);
-        if($res->heur_depart<$dt){?>
-        <button name="submit" class="btn btn-sm btn-primary"><?php echo $res->state; ?></button>
-        <?php }else{?>
-            <p class="btn border border-secondary">Validé</p>
-        <?php }?>
+            <div>
+                        <input type="hidden" name="id" 
+                        value="<?php echo $res->id_billet; ?>">
+                        <button class="btn btn-sm btn-primary">delete</button>
+            </div>    
 </section>
-</form>
+    </form>
     <?php endforeach?>
+
 
 
 

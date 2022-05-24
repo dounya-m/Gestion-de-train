@@ -8,6 +8,11 @@
             return $voyages;
         }
 
+        public function getAllVoyageArchive(){
+            $voyages = Voyage::getArchive();
+            return $voyages;
+        }
+        
         public function addVoyages(){
             if(isset($_POST['submit'])){
                 $data = array(
@@ -43,7 +48,22 @@
             }
 
         }
-
+        //creat function for updaiting status of voyage from 0 to 1
+        public function updateStateVoyage(){
+            if(isset($_POST['id'])){
+                //voyage statu =0
+                $newVal=1;
+                $status= array(
+                    'id'=>$_POST['id'],
+                    'status' => $newVal,
+                );
+                $voyage = Voyage::updateState($status);
+                echo 'oktoto';
+                return $voyage;
+            }else{
+                echo 'error';
+            }
+        }
         public function updateOneVoyage(){
             // call Voyage model update function 
             if(isset($_POST['submit'])){

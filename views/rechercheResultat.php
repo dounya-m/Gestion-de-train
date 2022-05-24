@@ -1,6 +1,6 @@
 <?php
     
-        if(isset($_POST['submit'])){
+if(isset($_POST['submit'])){
     $rechercheVoyage = new VoyageController();
     $data = $rechercheVoyage->findVoyage();
 }
@@ -50,7 +50,7 @@
     <!-- <form action="" method="post"> -->
         <section class="resultats d-flex justify-content-center align-items-center m-3 mt-5">
         <?php foreach($data as $voyage):?>
-            <?php if($voyage['heur_depart']>time()){?>
+            <?php if($voyage['heur_depart']>time()  || $voyage['date']>date("Y-m-d", time())){?>
             <div class="card" style="width: 25rem;">
             <?php if($voyage['heur_depart'] >= "08:00" && $voyage['heur_depart'] <= "20:00"){ ?>
         <img class="card-img-top" src="./public/images/morning.webp" alt="Card image cap">

@@ -22,8 +22,6 @@ class Client{
         }else{
             return 'error';
         }
-            $stmt->close();
-            $stmt = null;
 
     }
 
@@ -49,7 +47,7 @@ class Client{
     static public function getTravls(){
         try{
             $idClient = $_SESSION['client_id'];
-            $query ="SELECT * FROM billet as b , voyage as v WHERE b.id_voyage like v.id and b.id_client like $idClient ";
+            $query ="SELECT *,b.id as id_billet FROM billet b , voyage v WHERE b.id_voyage=v.id and b.id_client=$idClient ";
             $stmt = Db::connect()->prepare($query);
             $stmt->execute();
             $allTravels = $stmt->fetchAll(PDO::FETCH_OBJ);

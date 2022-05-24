@@ -7,15 +7,19 @@ class Voyage{
     static public function getAll(){
 
         // $stmt = Db::connect()->prepare('SELECT * FROM voyage');
-        $stmt = Db::connect()->prepare('SELECT voyage.*, train.id as train_id, train.nom, train.first_class, 
-        train.second_class, train.N FROM voyage INNER JOIN train ON voyage.train = train.id');
+        $stmt = Db::connect()->prepare('SELECT voyage.*, train.id as train_id, train.nom, train.first_class, train.N FROM voyage INNER JOIN train ON voyage.train = train.id WHERE voyage.status = 0');
 
         $stmt->execute();
         return $stmt->fetchAll();
-        $stmt->close();
-        $stmt = null;
     }
 
+    static public function getArchive(){
+
+        $stmt = Db::connect()->prepare('SELECT voyage.*, train.id as train_id, train.nom, train.first_class, train.N FROM voyage INNER JOIN train ON voyage.train = train.id WHERE voyage.status = 1');
+
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 
 
     static public function add($data){
@@ -40,8 +44,6 @@ class Voyage{
         }else{
             return 'error';
         }
-            $stmt->close();
-            $stmt = null;
     }
 
     static public function getVoyage($id){ 
@@ -96,6 +98,23 @@ class Voyage{
 
     }
 
+    //creat a static function for updaiting status of voyage
+    static public function updateState($status){
+
+        $stmt = Db::connect()->prepare('UPDATE voyage SET status = :status WHERE id = :id');
+
+        $stmt->bindParam(':id', $status['id']);
+        $stmt->bindParam(':status', $status['status']);
+
+
+        if($stmt->execute()){
+            echo 'okih';
+        }else{
+            echo 'error';
+        };
+
+    }
+
 
     static public function update($data){
         $id = $data['id'];
@@ -125,8 +144,9 @@ class Voyage{
         static public function recherche($data){
 
             try{
-            
-                $query = 'SELECT * FROM voyage WHERE date LIKE ? AND gare_dep LIKE ? AND gare_arr LIKE ?';
+
+                $query='SELECT v.*,t.first_class as places FROM voyage v,train t WHERE t.id=v.train and date LIKE ? AND gare_dep LIKE ? AND gare_arr LIKE ? And v.status = 0 and 
+                ((select count(*) from billet b where b.id_voyage=v.id)=0 OR ((select count(*) from billet b where b.id_voyage=v.id)) <t.first_class) ';
                 $stmt = Db::connect()->prepare($query);
                 $stmt->execute(array("%".$data['date']."%", "%".$data['gare_dep']."%", "%".$data['gare_arr']."%"  ));
 
@@ -146,8 +166,7 @@ class Voyage{
         }else{
             return 'error';
         }
-            $stmt->close();
-            $stmt = null;
+
         }
 
         

@@ -5,7 +5,6 @@ class Billet{
 
 static public function insert($data){
 
-    
     $stmt = Db::connect()->prepare('INSERT INTO `billet`
     (`nom`, `prenom`, `tele`, `email` , `id_voyage` , `id_client`) 
     VALUES (?,?,?,?,?,?)');
@@ -77,6 +76,30 @@ static public function getNumberVoyage($id){
     }
 }
 
+static public function delete($id){
+    // $id = $data ['id'];
+    
+        
+        $query = "DELETE FROM `billet` WHERE `id` = '$id'";
+        $stmt = Db::connect()->prepare($query);
+       
+        // $stmt->execute(array(":id" => $id));
+            if($stmt->execute())
+                return true;
+                return false;
+
+
+// public function delete($table,$val,$id)
+//     {
+//         $query = Db::connect()->prepare("DELETE FROM $table WHERE $val=$id");
+//         $query->execute();
+//     }
+
+
+
+
+    
+
 
 }
 
@@ -89,5 +112,6 @@ static public function getNumberVoyage($id){
 
 
 
+}
 
 ?>
