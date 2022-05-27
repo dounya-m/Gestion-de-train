@@ -44,9 +44,13 @@
             <p class="mr-4">action:</p>
         </div>
             <div>
+                <?php if($res->heur_depart > date("H:i") && $res->date >= date("Y-m-d", time())){ ?>
                         <input type="hidden" name="id" 
                         value="<?php echo $res->id_billet; ?>">
                         <button class="btn btn-sm btn-primary">delete</button>
+                        <?php }else{?>
+                        <p class=" btn btn-light text-primary" >Vous ne pouvez pas annuler ce billet</p>
+                        <?php }?>
             </div>    
 </section>
     </form>
